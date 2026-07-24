@@ -61,7 +61,19 @@ results/                     cq_shift.json, cq_matrix.{csv,md,json},
                              fuseki_scaling.{json,md}
 scripts/                     the evaluation harness (see Reproducing).
 external/PROVENANCE.md       what the external ontologies were, and where from.
+dist/shift.ttl               generated: core + ext merged into one graph, the
+                             serialisation published at https://w3id.org/shift.
 ```
+
+### The published serialisation
+
+`dist/shift.ttl` is built by `scripts/build_merged_ontology.py` and copied to
+[oreganb/shift](https://github.com/oreganb/shift) as `ontology/shift.ttl`, which
+is what `https://w3id.org/shift/core` dereferences to. It merges both modules
+into a single graph on purpose: a client resolving the namespace receives one
+document and does not follow `owl:imports`, so serving `shift-core.ttl` alone
+would silently hide all 100 `shift-ext.ttl` terms — including `ownsAsset` and
+`assetFunction`, which the rules depend on. Regenerate it on every release.
 
 **External ontologies are not redistributed here.** SAREF is ETSI-published under
 its own licence terms; the SEAS copies are omitted for the same reason and for
