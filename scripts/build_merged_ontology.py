@@ -91,32 +91,23 @@ def main():
 
     body = g.serialize(format="turtle")
 
+    # Kept deliberately tight: `curl … | head -20` on the published namespace
+    # should reach the first @prefix, not run out of screen inside a banner.
     header = f"""\
-# SHIFT Ontology — merged serialisation
-# Semantic Hierarchy for Intelligent Flexibility & Trading
+# SHIFT Ontology — merged serialisation (core + rule vocabulary extension)
 #
-# GENERATED FILE — DO NOT EDIT BY HAND.
+# GENERATED — DO NOT EDIT. Regenerated each release; hand edits are overwritten.
+#   Source   : https://github.com/oreganb/shift-kg  release v{version}
+#   Built by : python3 scripts/build_merged_ontology.py
+#   From     : ontology/shift-core.ttl + ontology/shift-ext.ttl
+#   Contains : {len(g)} triples, {len(classes)} named classes, {len(props)} named properties
 #
-#   Generated from : https://github.com/oreganb/shift-kg  release v{version}
-#   Built from     : ontology/shift-core.ttl + ontology/shift-ext.ttl
-#   Command        : python3 scripts/build_merged_ontology.py
-#   Regenerated    : on each SHIFT release. Hand edits will be overwritten —
-#                    change the source modules in oreganb/shift-kg instead.
+# Dereference target of https://w3id.org/shift/core. The two release modules are
+# merged because a client resolving the namespace receives one document and does
+# not follow owl:imports; rdfs:isDefinedBy on each term records its module.
 #
-# This file is the dereference target of https://w3id.org/shift/core and is the
-# complete TBox in one graph: the two release modules are merged here because a
-# client resolving the namespace receives one document and does not follow
-# owl:imports. Both owl:Ontology headers are retained; rdfs:isDefinedBy on each
-# term records which module defines it.
-#
-#   Triples          {len(g)}
-#   Named classes    {len(classes)}
-#   Named properties {len(props)}
-#   Ontologies       {', '.join(ontologies)}
-#
-# Licence: CC-BY-4.0. Cite via CITATION.cff in oreganb/shift-kg.
-# The populated knowledge graph, SPARQL rule set, competency questions and
-# evaluation harness are in oreganb/shift-kg — they are not part of this file.
+# Licence CC-BY-4.0. Cite via CITATION.cff in oreganb/shift-kg, which also holds
+# the populated knowledge graph, SPARQL rules, CQs and evaluation harness.
 
 """
 

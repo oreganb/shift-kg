@@ -1,28 +1,17 @@
-# SHIFT Ontology — merged serialisation
-# Semantic Hierarchy for Intelligent Flexibility & Trading
+# SHIFT Ontology — merged serialisation (core + rule vocabulary extension)
 #
-# GENERATED FILE — DO NOT EDIT BY HAND.
+# GENERATED — DO NOT EDIT. Regenerated each release; hand edits are overwritten.
+#   Source   : https://github.com/oreganb/shift-kg  release v1.0.0
+#   Built by : python3 scripts/build_merged_ontology.py
+#   From     : ontology/shift-core.ttl + ontology/shift-ext.ttl
+#   Contains : 2290 triples, 53 named classes, 446 named properties
 #
-#   Generated from : https://github.com/oreganb/shift-kg  release v1.0.0
-#   Built from     : ontology/shift-core.ttl + ontology/shift-ext.ttl
-#   Command        : python3 scripts/build_merged_ontology.py
-#   Regenerated    : on each SHIFT release. Hand edits will be overwritten —
-#                    change the source modules in oreganb/shift-kg instead.
+# Dereference target of https://w3id.org/shift/core. The two release modules are
+# merged because a client resolving the namespace receives one document and does
+# not follow owl:imports; rdfs:isDefinedBy on each term records its module.
 #
-# This file is the dereference target of https://w3id.org/shift/core and is the
-# complete TBox in one graph: the two release modules are merged here because a
-# client resolving the namespace receives one document and does not follow
-# owl:imports. Both owl:Ontology headers are retained; rdfs:isDefinedBy on each
-# term records which module defines it.
-#
-#   Triples          2290
-#   Named classes    53
-#   Named properties 446
-#   Ontologies       https://w3id.org/shift/core, https://w3id.org/shift/ext
-#
-# Licence: CC-BY-4.0. Cite via CITATION.cff in oreganb/shift-kg.
-# The populated knowledge graph, SPARQL rule set, competency questions and
-# evaluation harness are in oreganb/shift-kg — they are not part of this file.
+# Licence CC-BY-4.0. Cite via CITATION.cff in oreganb/shift-kg, which also holds
+# the populated knowledge graph, SPARQL rules, CQs and evaluation harness.
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
