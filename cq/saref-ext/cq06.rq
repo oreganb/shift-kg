@@ -1,0 +1,14 @@
+# CQ-06 in SAREF Core + 4ENER + 4BLDG -- PARTIAL.
+# The extensions add a response-time analogue: s4ener:hasActivationDelay
+# (xsd:duration, no declared domain). Controllability is already Core's
+# saref:Actuator. What is still missing is the GRID NODE: s4bldg adds Building
+# and BuildingSpace, which are spatial containers, not network nodes, so the
+# "at node N" constraint cannot be applied and this returns every controllable
+# device rather than those at one node.
+PREFIX saref:  <https://saref.etsi.org/core/>
+PREFIX s4ener: <https://saref.etsi.org/saref4ener/>
+SELECT ?asset ?activationDelay WHERE {
+  ?asset a saref:Actuator ;
+         s4ener:hasActivationDelay ?activationDelay .
+}
+ORDER BY ?asset

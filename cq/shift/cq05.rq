@@ -1,0 +1,29 @@
+# CQ-05  Which aggregators currently satisfy the platform's participation
+#        requirements?
+# Group A (actors and roles). Basis: SHIFT-RR-14 (aggregator prequalification).
+#
+# Parameters (method note 5): each participation criterion is a separate
+# parameter, per method note 6 -- the criteria are policy, not question content.
+#
+# NOTE this returns nothing on the aran graph. The vocabulary is present
+# (shift:Aggregator, shift:isTrustedAggregator, shift:complianceScore) but the
+# v0.1.1 generator instantiates no shift:Aggregator individuals, so the gold
+# answer is empty too. Recorded as vacuous, not as a pass.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?aggregator ?complianceScore
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?MIN_COMPLIANCE_SCORE { 0.8 }        # RR-14 default
+  VALUES ?REQUIRE_TRUSTED      { true }       # RR-14 default
+  VALUES ?REQUIRE_ACTIVE       { true }       # RR-14 default
+  # ----------------------------------------------------------------------
+  ?aggregator a shift:Aggregator ;
+              shift:complianceScore ?complianceScore ;
+              shift:isTrustedAggregator ?trusted ;
+              shift:isActive ?active .
+  FILTER(?complianceScore >= ?MIN_COMPLIANCE_SCORE)
+  FILTER(!?REQUIRE_TRUSTED || ?trusted)
+  FILTER(!?REQUIRE_ACTIVE  || ?active)
+}
+ORDER BY ?aggregator

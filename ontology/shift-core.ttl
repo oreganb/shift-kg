@@ -1,0 +1,1749 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shift: <https://w3id.org/shift/core#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+shift:Consumer a owl:Class ;
+    rdfs:label "Consumer"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:Flexumer a owl:Class ;
+    rdfs:label "Flexumer"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:Producer a owl:Class ;
+    rdfs:label "Producer"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:Prosumer a owl:Class ;
+    rdfs:label "Prosumer"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:Retailer a owl:Class ;
+    rdfs:label "Retailer"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:VirtualAsset a owl:Class ;
+    rdfs:label "VirtualAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:accuracyClass a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:string .
+
+shift:accuracyRating_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:decimal .
+
+shift:activatesService a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:FlexibilityService .
+
+shift:activationNoticePeriod_min a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:integer .
+
+shift:activationResponseTime_ms a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:integer .
+
+shift:activationSignalType a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:string .
+
+shift:activationTime_sec a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityService shift:ReserveCapacityService ) ] ;
+    rdfs:range xsd:integer ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:actorID a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:actorType a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:aggregates a owl:ObjectProperty ;
+    rdfs:domain shift:Aggregator ;
+    rdfs:range shift:FlexibilityServiceProvider .
+
+shift:agreedFlexVolume_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:float .
+
+shift:agreedPrice_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:float .
+
+shift:algorithmVersion a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:string .
+
+shift:allowsManualOverride a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:boolean .
+
+shift:applicableToUserType a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:string .
+
+shift:applicableVoltageLevel a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:string .
+
+shift:assetID a owl:DatatypeProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range xsd:string .
+
+shift:assignedToVPPO a owl:ObjectProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range shift:VirtualPowerPlantOperator .
+
+shift:assignedToWindow a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:TradeWindow .
+
+shift:associatedWithAsset a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range shift:Asset .
+
+shift:associatedWithService a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range shift:FlexibilityService .
+
+shift:attachedToNode a owl:ObjectProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range shift:Node .
+
+shift:availablePower_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:float .
+
+shift:baseRate_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:float .
+
+shift:baselineEnergyUse_kWhYr a owl:DatatypeProperty ;
+    rdfs:domain shift:BuildingAsset ;
+    rdfs:range xsd:float .
+
+shift:baselineMethod a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService ) ] ;
+    rdfs:range xsd:string ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:belongsToActor a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range shift:Actor .
+
+shift:billingFrequency a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:string .
+
+shift:btmFlexType a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:string .
+
+shift:buildingType a owl:DatatypeProperty ;
+    rdfs:domain shift:BuildingAsset ;
+    rdfs:range xsd:string .
+
+shift:carbonReduction_kgCO2eq a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:float .
+
+shift:certificationLevel a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:chargedFrom a owl:ObjectProperty ;
+    rdfs:domain shift:StorageAsset ;
+    rdfs:range shift:GenerationAsset .
+
+shift:clearedBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityTrade shift:MarketFlexibilityService shift:PeerToPeerFlexibilityService ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:MarketOperator shift:PeerFlexClearingMechanism ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 3 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 2 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:clearedInMarket a owl:ObjectProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range shift:MarketOperator .
+
+shift:clearedVolume_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:float .
+
+shift:clearingFrequency_min a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:integer .
+
+shift:clearingMechanismID a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:string .
+
+shift:clearingPrice_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:float .
+
+shift:clearingType a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:string .
+
+shift:clearsTrade a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:FlexibilityTrade .
+
+shift:codeURL a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:anyURI .
+
+shift:coefficientOfPerformance a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalAsset ;
+    rdfs:range xsd:decimal .
+
+shift:comfortBand_Celsius a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:string .
+
+shift:comfortImpactAcknowledged a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:boolean .
+
+shift:comfortImpactScore a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService shift:ThermalAsset ) ] ;
+    rdfs:range xsd:decimal ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 3 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:committedPower_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:float .
+
+shift:complianceStatus a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:confidenceInterval_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:decimal .
+
+shift:confidenceScore a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:decimal .
+
+shift:confirmsTrade a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range shift:FlexibilityTrade .
+
+shift:congestionRiskScore a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:decimal .
+
+shift:connectedTo a owl:ObjectProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range shift:Asset .
+
+shift:connectedToBuilding a owl:ObjectProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range shift:BuildingAsset .
+
+shift:connectedToControl a owl:ObjectProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range shift:ControlAsset .
+
+shift:connectedToNode a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:Node .
+
+shift:connectedToSensor a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:SensorAsset .
+
+shift:consentStatus a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:string .
+
+shift:contractBetween a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range shift:Actor .
+
+shift:contractEndTime a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:dateTime .
+
+shift:contractID a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:string .
+
+shift:contractStartTime a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:dateTime .
+
+shift:contractStatus a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:string .
+
+shift:contractType a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:string .
+
+shift:contractedDuration_min a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:integer .
+
+shift:controlAccuracy_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:decimal .
+
+shift:controlAlgorithmType a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:string .
+
+shift:controlAssetID a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:string .
+
+shift:controlAssetType a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:string .
+
+shift:controlStrategy a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:string .
+
+shift:controlledBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:Asset shift:BehindTheMeterFlexService shift:SmartMeterAsset shift:ThermalInertiaService ) ] ;
+    rdfs:range shift:ControlAsset ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 4 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:controls a owl:ObjectProperty ;
+    rdfs:domain shift:VirtualPowerPlantOperator ;
+    rdfs:range shift:Asset .
+
+shift:controlsAsset a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:Asset .
+
+shift:controlsAssetOperation a owl:ObjectProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range shift:ControlAsset .
+
+shift:controlsViaAsset a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:ControlAsset .
+
+shift:country a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:createdByAutomation a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:boolean .
+
+shift:createdBySystem a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:boolean .
+
+shift:criticalPeakRate_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:float .
+
+shift:customerOptOutAvailable a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:boolean .
+
+shift:dataExportFormat a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:string .
+
+shift:dataFileURL a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:anyURI .
+
+shift:dataFrequency_sec a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:integer .
+
+shift:definedBy a owl:ObjectProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range shift:Actor .
+
+shift:definedInContract a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilitySchedule shift:FlexibilityService shift:FrequencyRegulationService shift:MarketFlexibilityService shift:PeerToPeerFlexibilityService shift:ReserveCapacityService shift:ThermalInertiaService shift:VoltageSupportService ) ] ;
+    rdfs:range shift:FlexibilityContract ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 9 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:definedInLocalPolicy a owl:ObjectProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range shift:FlexibilityContract .
+
+shift:definesSchedule a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range shift:FlexibilitySchedule .
+
+shift:deliveredBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService shift:FrequencyRegulationService shift:ReserveCapacityService shift:ThermalInertiaService shift:VoltageSupportService ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:Asset shift:ThermalAsset ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 6 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 2 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:deployedOnPlatform a owl:ObjectProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range shift:TransactivePlatform .
+
+shift:designedByActor a owl:ObjectProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range shift:Actor .
+
+shift:dischargesTo a owl:ObjectProperty ;
+    rdfs:domain shift:StorageAsset ;
+    rdfs:range shift:LoadAsset .
+
+shift:dispatchAccuracy_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:decimal .
+
+shift:dispatchPriorityLevel a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:integer .
+
+shift:dispatchedBy a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range shift:FlexibilityServiceProvider .
+
+shift:drType a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:string .
+
+shift:drivesBTMFlexService a owl:ObjectProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range shift:BehindTheMeterFlexService .
+
+shift:duration_min a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilitySchedule shift:TradeWindow ) ] ;
+    rdfs:range xsd:integer ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:endTime a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilitySchedule shift:ForecastData shift:TradeWindow ) ] ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 3 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:energyCommitted_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:float .
+
+shift:energySaved_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:float .
+
+shift:energyVolume_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:float .
+
+shift:enforcedBy a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range shift:MarketOperator .
+
+shift:equipmentType a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:string .
+
+shift:eventNotificationTime_min a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:integer .
+
+shift:executedByUser a owl:ObjectProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range shift:Actor .
+
+shift:executedThroughPlatform a owl:ObjectProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range shift:TransactivePlatform .
+
+shift:failureReason a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:string .
+
+shift:feedsIntoPlatform a owl:ObjectProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range shift:TransactivePlatform .
+
+shift:firmwareVersion a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:ControlAsset shift:SensorAsset shift:SmartMeterAsset ) ] ;
+    rdfs:range xsd:string ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 3 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:floorArea_m2 a owl:DatatypeProperty ;
+    rdfs:domain shift:BuildingAsset ;
+    rdfs:range xsd:float .
+
+shift:forecastAccuracy_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:decimal .
+
+shift:forecastDataHash a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:string .
+
+shift:forecastID a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:string .
+
+shift:forecastType a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:string .
+
+shift:frequencyDeviationThreshold_Hz a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:decimal .
+
+shift:frequencyResponseType a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:string .
+
+shift:generatedBySystem a owl:ObjectProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range shift:ControlAsset .
+
+shift:governanceModel a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:governedByDSO a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:Actor .
+
+shift:governsService a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityContract shift:FlexibilityTrade ) ] ;
+    rdfs:range shift:FlexibilityService ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:governsTrade a owl:ObjectProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range shift:FlexibilityTrade .
+
+shift:granularity_sec a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:integer .
+
+shift:hasActivationPenalty a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:boolean .
+
+shift:hasMember a owl:ObjectProperty ;
+    rdfs:domain shift:EnergyCommunity ;
+    rdfs:range shift:Actor .
+
+shift:hasSmartMeter a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:SmartMeterAsset .
+
+shift:hostsAsset a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:Asset .
+
+shift:hostsTariffPlan a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:TariffPlan .
+
+shift:incentiveBonus_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityContract shift:TariffPlan ) ] ;
+    rdfs:range xsd:float ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:incentiveRate_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:float .
+
+shift:includedInTradeWindow a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:TradeWindow .
+
+shift:includesClearingMechanism a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:PeerFlexClearingMechanism .
+
+shift:includesEquityWeighting a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:boolean .
+
+shift:includesTrade a owl:ObjectProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range shift:FlexibilityTrade .
+
+shift:influencesComfortSystem a owl:ObjectProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range shift:ThermalAsset .
+
+shift:influencesTariffPlan a owl:ObjectProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range shift:TariffPlan .
+
+shift:informedByForecast a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:ControlAsset shift:TradeWindow ) ] ;
+    rdfs:range shift:ForecastData ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:initiatedBy a owl:ObjectProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range shift:Actor .
+
+shift:installationDate a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:dateTime .
+
+shift:installedCapacity_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:GenerationAsset ;
+    rdfs:range xsd:float .
+
+shift:integratesActor a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:Actor .
+
+shift:interactsWithNode a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:Node .
+
+shift:interoperabilityLevel a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:isActive a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:Actor shift:FlexibilityService ) ] ;
+    rdfs:range xsd:boolean ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:isAutoRenewable a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:boolean .
+
+shift:isAutomated a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService ) ] ;
+    rdfs:range xsd:boolean ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:isAutonomous a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isBatteryOptimized a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:boolean .
+
+shift:isBatteryPowered a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isBiDirectional a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isBidirectional a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:EVAsset shift:FrequencyRegulationService ) ] ;
+    rdfs:range xsd:boolean ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:isBidirectionalReactiveSupport a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:boolean .
+
+shift:isBilateralContractAllowed a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:boolean .
+
+shift:isClearingEngineDistributed a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:boolean .
+
+shift:isCoOptimizedWithElectricLoad a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:boolean .
+
+shift:isCommunityModerated a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:boolean .
+
+shift:isCongestionPoint a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:boolean .
+
+shift:isContinuousResponse a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:boolean .
+
+shift:isCyberSecure a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isDecentralizedExecution a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:boolean .
+
+shift:isDispatchable a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilitySchedule shift:FlexibilityTrade shift:GenerationAsset shift:ReserveCapacityService ) ] ;
+    rdfs:range xsd:boolean ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 4 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:isDynamic a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:boolean .
+
+shift:isEdgeDeployed a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isExecutedOffMarket a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:boolean .
+
+shift:isFaultDetected a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isFullyLocal a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:boolean .
+
+shift:isIndoorSensor a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isInteroperable a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isInterruptible a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilitySchedule ) ] ;
+    rdfs:range xsd:boolean ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:isIslandable a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:boolean .
+
+shift:isLocationConstrained a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:boolean .
+
+shift:isManualOverrideAllowed a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:boolean .
+
+shift:isMarketClearingWindow a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:boolean .
+
+shift:isOccupancyAware a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:boolean .
+
+shift:isPayAsBid a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:boolean .
+
+shift:isPeerTradeEnabled a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:boolean .
+
+shift:isPermissioned a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:boolean .
+
+shift:isPrequalified a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:boolean .
+
+shift:isProbabilistic a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:boolean .
+
+shift:isRegulatorApproved a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:boolean .
+
+shift:isRemoteReadable a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isRevenueGrade a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isRollingWindow a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:boolean .
+
+shift:isSmartContract a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:boolean .
+
+shift:isSmartContractBased a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:boolean .
+
+shift:isStrategicReserve a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:boolean .
+
+shift:isTamperDetected a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isTransparentLogic a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:boolean .
+
+shift:isUsedForSettlement a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isUsedForValidation a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:boolean .
+
+shift:isUsedInDecisionMaking a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:boolean .
+
+shift:isUserConfigurable a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:boolean .
+
+shift:isUserSelectable a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:boolean .
+
+shift:isValid a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:boolean .
+
+shift:isValidated a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityTrade shift:MarketFlexibilityService ) ] ;
+    rdfs:range xsd:boolean ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:isValidationRequired a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:boolean .
+
+shift:isWireless a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:boolean .
+
+shift:lastActivatedTimestamp a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:dateTime .
+
+shift:lastAuditDate a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:dateTime .
+
+shift:lastCalibrationDate a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:dateTime .
+
+shift:lastCongestionEvent a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:dateTime .
+
+shift:lastDataCaptureTime a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:dateTime .
+
+shift:lastLocalAdjustmentTime a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:dateTime .
+
+shift:lastMaintenanceDate a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:dateTime .
+
+shift:lastMarketParticipationTime a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:dateTime .
+
+shift:lastReadTime a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:dateTime .
+
+shift:lastResponseTimestamp a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:dateTime .
+
+shift:lastUpdateTime a owl:DatatypeProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range xsd:dateTime .
+
+shift:lastUpdatedAt a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:ForecastData shift:TariffPlan shift:TradeWindow shift:TransactivePlatform ) ] ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 4 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:latitude a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:decimal .
+
+shift:licensesActor a owl:ObjectProperty ;
+    rdfs:domain shift:RegulatoryAuthority ;
+    rdfs:range shift:Actor .
+
+shift:linkedToAsset a owl:ObjectProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range shift:Asset .
+
+shift:linkedToFlexService a owl:ObjectProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range shift:FlexibilityService .
+
+shift:linkedToForecast a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:Asset shift:FlexibilitySchedule ) ] ;
+    rdfs:range shift:ForecastData ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:linkedToNode a owl:ObjectProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range shift:Node .
+
+shift:linkedToSchedule a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService shift:FrequencyRegulationService shift:MarketFlexibilityService shift:PeerToPeerFlexibilityService shift:ReserveCapacityService shift:ThermalInertiaService shift:VoltageSupportService ) ] ;
+    rdfs:range shift:FlexibilitySchedule ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 8 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:locatedAt a owl:ObjectProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range shift:Node .
+
+shift:longitude a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:decimal .
+
+shift:managedBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService shift:FrequencyRegulationService shift:ReserveCapacityService shift:ThermalInertiaService shift:TradeWindow shift:VoltageSupportService ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityServiceProvider shift:MarketOperator ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 7 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 2 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:managedByActor a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:Actor .
+
+shift:marketFlexType a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:string .
+
+shift:marketRole a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:marketType a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:maxThermalShift_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:float .
+
+shift:maximumCurtailment_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:float .
+
+shift:maximumDuration_min a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:range xsd:integer .
+
+shift:measuredBy a owl:ObjectProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range shift:SmartMeterAsset .
+
+shift:meterType a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:string .
+
+shift:minimumAvailabilityWindow_hr a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:float .
+
+shift:minimumCurtailment_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:float .
+
+shift:minimumDeliveryVolume_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:float .
+
+shift:minimumDuration_min a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:range xsd:integer .
+
+shift:monitoredBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:Asset shift:BehindTheMeterFlexService shift:FlexibilityContract ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:SensorAsset shift:SmartMeterAsset ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 3 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 2 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:monitoredBySensor a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:SensorAsset .
+
+shift:monitorsActor a owl:ObjectProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range shift:Actor .
+
+shift:monitorsAsset a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:SensorAsset shift:SmartMeterAsset ) ] ;
+    rdfs:range shift:Asset ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:nodeID a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:string .
+
+shift:nodeType a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:string .
+
+shift:offPeakRate_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:float .
+
+shift:offeredBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:MarketFlexibilityService shift:PeerToPeerFlexibilityService ) ] ;
+    rdfs:range shift:Actor ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:offeredVolume_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range xsd:float .
+
+shift:operatedByActor a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:Actor .
+
+shift:operatesMarket a owl:ObjectProperty ;
+    rdfs:domain shift:MarketOperator ;
+    rdfs:range shift:Actor .
+
+shift:operatesOnNode a owl:ObjectProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range shift:Node .
+
+shift:operatingStatus a owl:DatatypeProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range xsd:string .
+
+shift:optInWindow_min a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:integer .
+
+shift:optOutWindow_min a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:integer .
+
+shift:ownedBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:SensorAsset shift:SmartMeterAsset ) ] ;
+    rdfs:range shift:Actor ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:participatesIn a owl:ObjectProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range shift:MarketOperator .
+
+shift:participatesInFlexibility a owl:ObjectProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range shift:FlexibilityService .
+
+shift:participatesInMarket a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:range shift:MarketOperator .
+
+shift:participationEndDate a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:date .
+
+shift:participationStartDate a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:date .
+
+shift:paymentModel a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:string .
+
+shift:peakRate_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:float .
+
+shift:peerFlexType a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:string .
+
+shift:peerMatchingAlgorithm a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:string .
+
+shift:penaltyRate_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityContract shift:TariffPlan ) ] ;
+    rdfs:range xsd:float ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:platformID a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:platformName a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:platformRegion a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:string .
+
+shift:powerFactorRange a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:string .
+
+shift:powerRating_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:StorageAsset ;
+    rdfs:range xsd:float .
+
+shift:pricePerUnit_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range xsd:float .
+
+shift:price_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityTrade shift:MarketFlexibilityService ) ] ;
+    rdfs:range xsd:float ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:priorityLevel a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:integer .
+
+shift:priorityScore a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:decimal .
+
+shift:reactivePowerCapacity_kVAR a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:float .
+
+shift:receivesDataFromMeter a owl:ObjectProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range shift:SmartMeterAsset .
+
+shift:referencedInForecast a owl:ObjectProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range shift:ForecastData .
+
+shift:region a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:registrationNumber a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:regulationAccuracy_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:decimal .
+
+shift:relatedContract a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range shift:FlexibilityContract .
+
+shift:relatedSchedule a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range shift:FlexibilitySchedule .
+
+shift:relatedToAsset a owl:ObjectProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range shift:Asset .
+
+shift:reliabilityScore a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:decimal .
+
+shift:reportsToPlatform a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:TransactivePlatform .
+
+shift:reservePowerAvailable_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:float .
+
+shift:reserveType a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:string .
+
+shift:responseAccuracy_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:range xsd:decimal .
+
+shift:responseTime_ms a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:ControlAsset shift:FrequencyRegulationService ) ] ;
+    rdfs:range xsd:integer ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:responseTime_sec a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:LoadAsset ) ] ;
+    rdfs:range xsd:integer ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:scheduleID a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:string .
+
+shift:scheduleType a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:string .
+
+shift:scheduledActivation a owl:DatatypeProperty ;
+    rdfs:domain shift:DemandResponseService ;
+    rdfs:range xsd:boolean .
+
+shift:scheduledBy a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range shift:FlexibilityServiceProvider .
+
+shift:sensorID a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:string .
+
+shift:sensorType a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:string .
+
+shift:serviceID a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:BehindTheMeterFlexService shift:DemandResponseService shift:FlexibilityService shift:FrequencyRegulationService shift:MarketFlexibilityService shift:PeerToPeerFlexibilityService shift:ReserveCapacityService shift:ThermalInertiaService shift:VoltageSupportService ) ] ;
+    rdfs:range xsd:string ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 9 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:settledBy a owl:ObjectProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range shift:MarketOperator .
+
+shift:settlementInterval_min a owl:DatatypeProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range xsd:integer .
+
+shift:settlementStatus a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityTrade shift:MarketFlexibilityService ) ] ;
+    rdfs:range xsd:string ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:smartMeterID a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:string .
+
+shift:standbyPower_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:ReserveCapacityService ;
+    rdfs:range xsd:float .
+
+shift:startTime a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilitySchedule shift:ForecastData shift:TradeWindow ) ] ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 3 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:stateOfCharge_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:StorageAsset ;
+    rdfs:range xsd:decimal .
+
+shift:status a owl:DatatypeProperty ;
+    rdfs:domain shift:Actor ;
+    rdfs:range xsd:string .
+
+shift:supportsAutomatedMatching a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:boolean .
+
+shift:supportsRealTimePricing a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:boolean .
+
+shift:supportsSmartContracts a owl:DatatypeProperty ;
+    rdfs:domain shift:TransactivePlatform ;
+    rdfs:range xsd:boolean .
+
+shift:targetedAtZone a owl:ObjectProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range shift:Node .
+
+shift:targetedLocation a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range shift:Node .
+
+shift:tariffID a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:string .
+
+shift:tariffThreshold_EURperkWh a owl:DatatypeProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range xsd:float .
+
+shift:tariffType a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:string .
+
+shift:temperatureDriftRate_Cpmin a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:float .
+
+shift:thermalInertiaType a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:string .
+
+shift:thermalResponseAccuracy_percent a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:decimal .
+
+shift:thermalStorageCapacity_kWh a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalAsset ;
+    rdfs:range xsd:float .
+
+shift:thermalStorageDuration_min a owl:DatatypeProperty ;
+    rdfs:domain shift:ThermalInertiaService ;
+    rdfs:range xsd:integer .
+
+shift:timeGranularity_min a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:integer .
+
+shift:totalConnectedLoad_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:float .
+
+shift:totalDERCapacity_kW a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:float .
+
+shift:tradeBuyer a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range shift:Actor .
+
+shift:tradeEndTime a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:dateTime .
+
+shift:tradeID a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:string .
+
+shift:tradeSeller a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range shift:Actor .
+
+shift:tradeStartTime a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:dateTime .
+
+shift:tradeTimestamp a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:dateTime .
+
+shift:tradeType a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:range xsd:string .
+
+shift:tradedAs a owl:ObjectProperty ;
+    rdfs:domain shift:MarketFlexibilityService ;
+    rdfs:range shift:FlexibilityProduct .
+
+shift:transactionHash a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerToPeerFlexibilityService ;
+    rdfs:range xsd:string .
+
+shift:triggeredBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FrequencyRegulationService shift:ReserveCapacityService shift:VoltageSupportService ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:DSO shift:MarketOperator shift:TSO ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 4 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 3 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:unitOfMeasurement a owl:DatatypeProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range xsd:string .
+
+shift:units a owl:DatatypeProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range xsd:string .
+
+shift:updatedAt a owl:DatatypeProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range xsd:dateTime .
+
+shift:updatedBy a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:range shift:ControlAsset .
+
+shift:updatesSchedule a owl:ObjectProperty ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:range shift:FlexibilitySchedule .
+
+shift:usedByFlexTrade a owl:ObjectProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range shift:FlexibilityTrade .
+
+shift:usedByService a owl:ObjectProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range shift:FlexibilityService .
+
+shift:usedForGridStabilization a owl:ObjectProperty ;
+    rdfs:domain shift:FrequencyRegulationService ;
+    rdfs:range shift:GridService .
+
+shift:usedForValidation a owl:ObjectProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range shift:FlexibilitySchedule .
+
+shift:usedInContract a owl:ObjectProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range shift:FlexibilityContract .
+
+shift:usedInFlexService a owl:ObjectProperty ;
+    rdfs:domain shift:SensorAsset ;
+    rdfs:range shift:FlexibilityService .
+
+shift:usedInFlexibilityService a owl:ObjectProperty ;
+    rdfs:domain shift:Asset ;
+    rdfs:range shift:FlexibilityService .
+
+shift:usedInForecast a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:SensorAsset shift:SmartMeterAsset ) ] ;
+    rdfs:range shift:ForecastData ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:usedInSchedule a owl:ObjectProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range shift:FlexibilitySchedule .
+
+shift:usedInService a owl:ObjectProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range shift:FlexibilityService .
+
+shift:usedInTradeWindow a owl:ObjectProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range shift:TradeWindow .
+
+shift:usesSmartContracts a owl:DatatypeProperty ;
+    rdfs:domain shift:PeerFlexClearingMechanism ;
+    rdfs:range xsd:boolean .
+
+shift:usesTariffPlan a owl:ObjectProperty ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:range shift:TariffPlan .
+
+shift:usesTariffSignal a owl:ObjectProperty ;
+    rdfs:domain shift:BehindTheMeterFlexService ;
+    rdfs:range shift:TariffPlan .
+
+shift:validFrom a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:dateTime .
+
+shift:validUntil a owl:DatatypeProperty ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:range xsd:dateTime .
+
+shift:validatedAgainstData a owl:ObjectProperty ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:range shift:SmartMeterAsset .
+
+shift:validatedBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityContract shift:FlexibilitySchedule shift:FlexibilityTrade shift:FrequencyRegulationService shift:ReserveCapacityService shift:VoltageSupportService ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:FlexibilityServiceProvider shift:SmartMeterAsset ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 6 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 2 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:validatedByRegulator a owl:DatatypeProperty ;
+    rdfs:domain shift:SmartMeterAsset ;
+    rdfs:range xsd:boolean .
+
+shift:verificationMethod a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService ) ] ;
+    rdfs:range xsd:string ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 2 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:verifiedBy a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( shift:DemandResponseService shift:FlexibilityService shift:PeerToPeerFlexibilityService shift:ThermalInertiaService ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( shift:SensorAsset shift:SmartMeterAsset ) ] ;
+    skos:note "Domain repair v0.1.1: legacy artefacts asserted 4 separate rdfs:domain triples (intersection semantics); replaced with owl:unionOf."@en,
+        "Range repair v0.1.1: legacy artefacts asserted 2 separate rdfs:range triples (intersection semantics); replaced with owl:unionOf."@en .
+
+shift:voltageLevel_kV a owl:DatatypeProperty ;
+    rdfs:domain shift:Node ;
+    rdfs:range xsd:float .
+
+shift:voltageSupportType a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:string .
+
+shift:voltageThresholdRange_V a owl:DatatypeProperty ;
+    rdfs:domain shift:VoltageSupportService ;
+    rdfs:range xsd:string .
+
+shift:windowID a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:string .
+
+shift:windowType a owl:DatatypeProperty ;
+    rdfs:domain shift:TradeWindow ;
+    rdfs:range xsd:string .
+
+shift:Aggregator a owl:Class ;
+    rdfs:label "Aggregator"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:DSO a owl:Class ;
+    rdfs:label "DSO"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:EVAsset a owl:Class ;
+    rdfs:label "EVAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:EnergyCommunity a owl:Class ;
+    rdfs:label "EnergyCommunity"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:FlexibilityProduct a owl:Class ;
+    rdfs:label "FlexibilityProduct"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf owl:Thing ;
+    skos:note "Defect repair v0.1.0: Tradable product abstraction referenced as a range in the legacy artefacts but never declared; declared here to restore OWL 2 DL consistency."@en .
+
+shift:GridService a owl:Class ;
+    rdfs:label "GridService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService ;
+    skos:note "Defect repair v0.1.0: Grid-facing service target of usedForGridStabilization. Referenced as a range by FrequencyRegulationService in the legacy artefacts but never declared; declared here to restore OWL 2 DL consistency."@en .
+
+shift:RegulatoryAuthority a owl:Class ;
+    rdfs:label "RegulatoryAuthority"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:TSO a owl:Class ;
+    rdfs:label "TSO"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:LoadAsset a owl:Class ;
+    rdfs:label "LoadAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:VirtualPowerPlantOperator a owl:Class ;
+    rdfs:label "VirtualPowerPlantOperator"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:GenerationAsset a owl:Class ;
+    rdfs:label "GenerationAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:BuildingAsset a owl:Class ;
+    rdfs:label "BuildingAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:StorageAsset a owl:Class ;
+    rdfs:label "StorageAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:FlexibilityServiceProvider a owl:Class ;
+    rdfs:label "FlexibilityServiceProvider"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:ThermalAsset a owl:Class ;
+    rdfs:label "ThermalAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:MarketOperator a owl:Class ;
+    rdfs:label "MarketOperator"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Actor .
+
+shift:VoltageSupportService a owl:Class ;
+    rdfs:label "VoltageSupportService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:ThermalInertiaService a owl:Class ;
+    rdfs:label "ThermalInertiaService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:PeerFlexClearingMechanism a owl:Class ;
+    rdfs:label "PeerFlexClearingMechanism"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:PeerToPeerFlexibilityService a owl:Class ;
+    rdfs:label "PeerToPeerFlexibilityService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:ReserveCapacityService a owl:Class ;
+    rdfs:label "ReserveCapacityService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:BehindTheMeterFlexService a owl:Class ;
+    rdfs:label "BehindTheMeterFlexService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:FrequencyRegulationService a owl:Class ;
+    rdfs:label "FrequencyRegulationService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:DemandResponseService a owl:Class ;
+    rdfs:label "DemandResponseService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:MarketFlexibilityService a owl:Class ;
+    rdfs:label "MarketFlexibilityService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:FlexibilityService .
+
+shift:TradeWindow a owl:Class ;
+    rdfs:label "TradeWindow"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:FlexibilityContract a owl:Class ;
+    rdfs:label "FlexibilityContract"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:ForecastData a owl:Class ;
+    rdfs:label "ForecastData"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:SensorAsset a owl:Class ;
+    rdfs:label "SensorAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:TariffPlan a owl:Class ;
+    rdfs:label "TariffPlan"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:TransactivePlatform a owl:Class ;
+    rdfs:label "TransactivePlatform"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:ControlAsset a owl:Class ;
+    rdfs:label "ControlAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:FlexibilityTrade a owl:Class ;
+    rdfs:label "FlexibilityTrade"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:Node a owl:Class ;
+    rdfs:label "Node"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:FlexibilitySchedule a owl:Class ;
+    rdfs:label "FlexibilitySchedule"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> .
+
+shift:SmartMeterAsset a owl:Class ;
+    rdfs:label "SmartMeterAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf shift:Asset .
+
+shift:Asset a owl:Class ;
+    rdfs:label "Asset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf owl:Thing .
+
+shift:FlexibilityService a owl:Class ;
+    rdfs:label "FlexibilityService"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf owl:Thing .
+
+shift:Actor a owl:Class ;
+    rdfs:label "Actor"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/core> ;
+    rdfs:subClassOf owl:Thing .
+
+<https://w3id.org/shift/core> a owl:Ontology ;
+    dcterms:creator "Brian O'Regan" ;
+    dcterms:description "Semantic Hierarchy for Intelligent Flexibility & Trading. Core TBox: actors, assets, flexibility services, contracts, trades, schedules, forecasts, tariffs, trade windows, nodes and platforms."@en ;
+    dcterms:issued "2026-07-15"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2026-07-24"^^xsd:date ;
+    dcterms:publisher "Tyndall National Institute / IERC, University College Cork" ;
+    dcterms:title "SHIFT Ontology — Core"@en ;
+    vann:preferredNamespacePrefix "shift" ;
+    vann:preferredNamespaceUri "https://w3id.org/shift/core#" ;
+    rdfs:comment "Funded under the CET Partnership Joint Call 2023, ref Cetp-FP2023-00114. Co-funded by the European Commission (GA No. 101069750) and national funding organisations including SEAI (Ireland)."@en ;
+    owl:versionIRI <https://w3id.org/shift/core/1.0.0> ;
+    owl:versionInfo "1.0.0" .
+

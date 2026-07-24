@@ -1,0 +1,12 @@
+# SHIFT-RR-23 : Flag conflicting tariff attributes
+# Expressible in SWRL: YES
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT {
+  ?t shift:hasTariffConflict true ;
+     shift:conflictType "DynamicAndFlatRateBothAsserted" .
+}
+WHERE {
+  ?t a shift:TariffPlan ;
+     shift:hasDynamicPricing true ;
+     shift:hasFlatRate true .
+}

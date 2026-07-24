@@ -1,0 +1,18 @@
+# CQ-12  Which contracts end before date D, and which services do they govern?
+# Group C (services, contracts, obligations). Basis: SHIFT-RR-09 / RR-12.
+#
+# Parameters (method note 5): the cut-off date D. Defaults to the graph clock,
+# i.e. contracts that have already expired.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?contract ?service ?contractEndDate
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?END_BEFORE { "2026-03-09T00:00:00"^^xsd:dateTime }  # graph clock
+  # ----------------------------------------------------------------------
+  ?service a shift:FlexibilityService ;
+           shift:associatedContract ?contract .
+  ?contract shift:contractEndDate ?contractEndDate .
+  FILTER(?contractEndDate < ?END_BEFORE)
+}
+ORDER BY ?contract

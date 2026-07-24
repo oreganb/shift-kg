@@ -1,0 +1,628 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/shift/kg/actor/A000> a seas:ElectricityPlayer ;
+    seas:contains <https://w3id.org/shift/kg/activity/FC-000>,
+        <https://w3id.org/shift/kg/activity/OP-000>,
+        <https://w3id.org/shift/kg/activity/PL-000> ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A000/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-000>,
+        <https://w3id.org/shift/kg/asset/LOAD-000>,
+        <https://w3id.org/shift/kg/asset/METER-000> .
+
+<https://w3id.org/shift/kg/actor/A001> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A001/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-001>,
+        <https://w3id.org/shift/kg/asset/LOAD-001>,
+        <https://w3id.org/shift/kg/asset/METER-001>,
+        <https://w3id.org/shift/kg/asset/PV-001> .
+
+<https://w3id.org/shift/kg/actor/A002> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A002/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/BAT-002>,
+        <https://w3id.org/shift/kg/asset/HP-002>,
+        <https://w3id.org/shift/kg/asset/LOAD-002>,
+        <https://w3id.org/shift/kg/asset/METER-002>,
+        <https://w3id.org/shift/kg/asset/PV-002> .
+
+<https://w3id.org/shift/kg/actor/A003> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A003/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/EV-003>,
+        <https://w3id.org/shift/kg/asset/LOAD-003>,
+        <https://w3id.org/shift/kg/asset/METER-003>,
+        <https://w3id.org/shift/kg/asset/PV-003> .
+
+<https://w3id.org/shift/kg/actor/A004> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A004/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-004>,
+        <https://w3id.org/shift/kg/asset/HP-004>,
+        <https://w3id.org/shift/kg/asset/LOAD-004>,
+        <https://w3id.org/shift/kg/asset/METER-004>,
+        <https://w3id.org/shift/kg/asset/PV-004> .
+
+<https://w3id.org/shift/kg/actor/A005> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A005/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/HP-005>,
+        <https://w3id.org/shift/kg/asset/LOAD-005>,
+        <https://w3id.org/shift/kg/asset/METER-005> .
+
+<https://w3id.org/shift/kg/actor/A006> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A006/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/HP-006>,
+        <https://w3id.org/shift/kg/asset/LOAD-006>,
+        <https://w3id.org/shift/kg/asset/METER-006>,
+        <https://w3id.org/shift/kg/asset/PV-006> .
+
+<https://w3id.org/shift/kg/actor/A007> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A007/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/BAT-007>,
+        <https://w3id.org/shift/kg/asset/HP-007>,
+        <https://w3id.org/shift/kg/asset/LOAD-007>,
+        <https://w3id.org/shift/kg/asset/METER-007>,
+        <https://w3id.org/shift/kg/asset/PV-007> .
+
+<https://w3id.org/shift/kg/actor/A008> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A008/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-008>,
+        <https://w3id.org/shift/kg/asset/LOAD-008>,
+        <https://w3id.org/shift/kg/asset/METER-008> .
+
+<https://w3id.org/shift/kg/actor/A009> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A009/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/LOAD-009>,
+        <https://w3id.org/shift/kg/asset/METER-009>,
+        <https://w3id.org/shift/kg/asset/PV-009> .
+
+<https://w3id.org/shift/kg/actor/A010> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A010/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-010>,
+        <https://w3id.org/shift/kg/asset/HP-010>,
+        <https://w3id.org/shift/kg/asset/LOAD-010>,
+        <https://w3id.org/shift/kg/asset/METER-010> .
+
+<https://w3id.org/shift/kg/actor/A011> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A011/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-011>,
+        <https://w3id.org/shift/kg/asset/EV-011>,
+        <https://w3id.org/shift/kg/asset/LOAD-011>,
+        <https://w3id.org/shift/kg/asset/METER-011>,
+        <https://w3id.org/shift/kg/asset/PV-011> .
+
+<https://w3id.org/shift/kg/actor/A012> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A012/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-012>,
+        <https://w3id.org/shift/kg/asset/LOAD-012>,
+        <https://w3id.org/shift/kg/asset/METER-012>,
+        <https://w3id.org/shift/kg/asset/PV-012> .
+
+<https://w3id.org/shift/kg/actor/A013> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A013/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-013>,
+        <https://w3id.org/shift/kg/asset/HP-013>,
+        <https://w3id.org/shift/kg/asset/LOAD-013>,
+        <https://w3id.org/shift/kg/asset/METER-013>,
+        <https://w3id.org/shift/kg/asset/PV-013> .
+
+<https://w3id.org/shift/kg/actor/A014> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A014/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/BAT-014>,
+        <https://w3id.org/shift/kg/asset/LOAD-014>,
+        <https://w3id.org/shift/kg/asset/METER-014> .
+
+<https://w3id.org/shift/kg/actor/A015> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A015/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/EV-015>,
+        <https://w3id.org/shift/kg/asset/HP-015>,
+        <https://w3id.org/shift/kg/asset/LOAD-015>,
+        <https://w3id.org/shift/kg/asset/METER-015>,
+        <https://w3id.org/shift/kg/asset/PV-015> .
+
+<https://w3id.org/shift/kg/actor/A016> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A016/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/LOAD-016>,
+        <https://w3id.org/shift/kg/asset/METER-016>,
+        <https://w3id.org/shift/kg/asset/PV-016> .
+
+<https://w3id.org/shift/kg/actor/A017> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A017/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-017>,
+        <https://w3id.org/shift/kg/asset/HP-017>,
+        <https://w3id.org/shift/kg/asset/LOAD-017>,
+        <https://w3id.org/shift/kg/asset/METER-017>,
+        <https://w3id.org/shift/kg/asset/PV-017> .
+
+<https://w3id.org/shift/kg/actor/A018> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A018/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/BAT-018>,
+        <https://w3id.org/shift/kg/asset/LOAD-018>,
+        <https://w3id.org/shift/kg/asset/METER-018> .
+
+<https://w3id.org/shift/kg/actor/A019> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A019/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/BAT-019>,
+        <https://w3id.org/shift/kg/asset/CTRL-019>,
+        <https://w3id.org/shift/kg/asset/HP-019>,
+        <https://w3id.org/shift/kg/asset/LOAD-019>,
+        <https://w3id.org/shift/kg/asset/METER-019>,
+        <https://w3id.org/shift/kg/asset/PV-019> .
+
+<https://w3id.org/shift/kg/actor/A020> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A020/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/EV-020>,
+        <https://w3id.org/shift/kg/asset/HP-020>,
+        <https://w3id.org/shift/kg/asset/LOAD-020>,
+        <https://w3id.org/shift/kg/asset/METER-020>,
+        <https://w3id.org/shift/kg/asset/PV-020> .
+
+<https://w3id.org/shift/kg/actor/A021> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A021/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/BAT-021>,
+        <https://w3id.org/shift/kg/asset/CTRL-021>,
+        <https://w3id.org/shift/kg/asset/HP-021>,
+        <https://w3id.org/shift/kg/asset/LOAD-021>,
+        <https://w3id.org/shift/kg/asset/METER-021> .
+
+<https://w3id.org/shift/kg/actor/A022> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A022/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/HP-022>,
+        <https://w3id.org/shift/kg/asset/LOAD-022>,
+        <https://w3id.org/shift/kg/asset/METER-022>,
+        <https://w3id.org/shift/kg/asset/PV-022> .
+
+<https://w3id.org/shift/kg/actor/A023> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A023/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/CTRL-023>,
+        <https://w3id.org/shift/kg/asset/EV-023>,
+        <https://w3id.org/shift/kg/asset/HP-023>,
+        <https://w3id.org/shift/kg/asset/LOAD-023>,
+        <https://w3id.org/shift/kg/asset/METER-023> .
+
+<https://w3id.org/shift/kg/actor/A024> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A024/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/LOAD-024>,
+        <https://w3id.org/shift/kg/asset/METER-024>,
+        <https://w3id.org/shift/kg/asset/PV-024> .
+
+<https://w3id.org/shift/kg/actor/A025> a seas:ElectricityPlayer ;
+    seas:hasRole <https://w3id.org/shift/kg/actor/A025/role> ;
+    seas:owns <https://w3id.org/shift/kg/asset/HP-025>,
+        <https://w3id.org/shift/kg/asset/LOAD-025>,
+        <https://w3id.org/shift/kg/asset/METER-025>,
+        <https://w3id.org/shift/kg/asset/PV-025> .
+
+<https://w3id.org/shift/kg/aggregator/AG-000> a seas:Aggregator ;
+    seas:hasRole <https://w3id.org/shift/kg/aggregator/AG-000/role> .
+
+<https://w3id.org/shift/kg/aggregator/AG-001> a seas:Aggregator ;
+    seas:hasRole <https://w3id.org/shift/kg/aggregator/AG-001/role> .
+
+<https://w3id.org/shift/kg/aggregator/AG-002> a seas:Aggregator ;
+    seas:hasRole <https://w3id.org/shift/kg/aggregator/AG-002/role> .
+
+<https://w3id.org/shift/kg/building/B-000> a seas:Building ;
+    seas:hasPart <https://w3id.org/shift/kg/asset/HP-002> .
+
+<https://w3id.org/shift/kg/building/B-001> a seas:Building ;
+    seas:hasPart <https://w3id.org/shift/kg/asset/BAT-002>,
+        <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/building/B-002> a seas:Building ;
+    seas:hasPart <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/contract/C000> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C001> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C002> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C003> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C004> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C005> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C006> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C007> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C008> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C009> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C010> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C011> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C012> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C013> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C014> a seas:Contract .
+
+<https://w3id.org/shift/kg/contract/C015> a seas:Contract .
+
+<https://w3id.org/shift/kg/node/Inisheer> a seas:ElectricPowerSystem .
+
+<https://w3id.org/shift/kg/activity/FC-000> a seas:ForecastingActivity .
+
+<https://w3id.org/shift/kg/activity/OP-000> a seas:OptimizationActivity .
+
+<https://w3id.org/shift/kg/activity/PL-000> a seas:PlanningActivity .
+
+<https://w3id.org/shift/kg/actor/A000/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A001/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A002/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A003/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A004/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A005/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A006/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A007/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A008/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A009/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A010/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A011/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A012/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A013/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A014/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A015/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A016/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A017/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A018/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A019/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A020/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A021/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A022/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A023/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A024/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/actor/A025/role> a seas:Role ;
+    rdfs:label "Consumer"@en .
+
+<https://w3id.org/shift/kg/aggregator/AG-000/role> a seas:Role ;
+    rdfs:label "Aggregator"@en .
+
+<https://w3id.org/shift/kg/aggregator/AG-001/role> a seas:Role ;
+    rdfs:label "Aggregator"@en .
+
+<https://w3id.org/shift/kg/aggregator/AG-002/role> a seas:Role ;
+    rdfs:label "Aggregator"@en .
+
+<https://w3id.org/shift/kg/asset/BAT-014> a seas:Battery,
+        seas:ElectricPowerStorageSystem .
+
+<https://w3id.org/shift/kg/asset/BAT-018> a seas:Battery,
+        seas:ElectricPowerStorageSystem .
+
+<https://w3id.org/shift/kg/asset/BAT-019> a seas:Battery,
+        seas:ElectricPowerStorageSystem .
+
+<https://w3id.org/shift/kg/asset/BAT-021> a seas:Battery,
+        seas:ElectricPowerStorageSystem .
+
+<https://w3id.org/shift/kg/asset/CTRL-000> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-001> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-004> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-008> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-010> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-011> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-012> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-013> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-017> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-019> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-021> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/CTRL-023> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/EV-003> a seas:ElectricPowerStorageSystem,
+        seas:ElectricVehicle .
+
+<https://w3id.org/shift/kg/asset/EV-011> a seas:ElectricPowerStorageSystem,
+        seas:ElectricVehicle .
+
+<https://w3id.org/shift/kg/asset/EV-015> a seas:ElectricPowerStorageSystem,
+        seas:ElectricVehicle .
+
+<https://w3id.org/shift/kg/asset/EV-020> a seas:ElectricPowerStorageSystem,
+        seas:ElectricVehicle .
+
+<https://w3id.org/shift/kg/asset/EV-023> a seas:ElectricPowerStorageSystem,
+        seas:ElectricVehicle .
+
+<https://w3id.org/shift/kg/asset/HP-005> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-006> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-007> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-010> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-013> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-015> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-017> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-019> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-020> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-021> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-022> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-023> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-025> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/LOAD-001> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-002> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-003> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-004> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-005> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-006> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-007> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-008> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-009> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-010> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-011> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-012> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-013> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-014> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-015> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-016> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-017> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-018> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-019> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-020> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-021> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-022> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-023> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-024> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/LOAD-025> a seas:ElectricPowerConsumer .
+
+<https://w3id.org/shift/kg/asset/METER-001> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-002> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-003> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-004> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-005> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-006> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-007> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-008> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-009> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-010> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-011> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-012> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-013> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-014> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-015> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-016> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-017> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-018> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-019> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-020> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-021> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-022> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-023> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-024> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/METER-025> a seas:Device .
+
+<https://w3id.org/shift/kg/asset/PV-002> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-003> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-004> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-006> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-007> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-009> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-011> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-012> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-013> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-015> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-016> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-017> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-019> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-020> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-022> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-024> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/asset/PV-025> a seas:ElectricPowerProducer,
+        seas:PhotovoltaicPanel .
+
+<https://w3id.org/shift/kg/node/Inishmaan> a seas:ElectricPowerSystem ;
+    seas:connectedTo <https://w3id.org/shift/kg/asset/PV-001> .
+
+<https://w3id.org/shift/kg/obs/METER-000-1> a seas:TimeContextualizedEvaluation ;
+    seas:evaluatedValue "2.4"^^xsd:float ;
+    seas:evaluationOf <https://w3id.org/shift/kg/property/ActivePower> ;
+    seas:temporalContext <https://w3id.org/shift/kg/obs/METER-000-1/instant> .
+
+<https://w3id.org/shift/kg/obs/METER-000-1/instant> a time:Instant ;
+    time:inXSDDateTime "2026-03-05T11:30:00"^^xsd:dateTime .
+
+<https://w3id.org/shift/kg/obs/METER-000-2> a seas:TimeContextualizedEvaluation ;
+    seas:evaluatedValue "3.1"^^xsd:float ;
+    seas:evaluationOf <https://w3id.org/shift/kg/property/ActivePower> ;
+    seas:temporalContext <https://w3id.org/shift/kg/obs/METER-000-2/instant> .
+
+<https://w3id.org/shift/kg/obs/METER-000-2/instant> a time:Instant ;
+    time:inXSDDateTime "2026-03-05T12:00:00"^^xsd:dateTime .
+
+<https://w3id.org/shift/kg/obs/METER-000-3> a seas:TimeContextualizedEvaluation ;
+    seas:evaluatedValue "2.8"^^xsd:float ;
+    seas:evaluationOf <https://w3id.org/shift/kg/property/ActivePower> ;
+    seas:temporalContext <https://w3id.org/shift/kg/obs/METER-000-3/instant> .
+
+<https://w3id.org/shift/kg/obs/METER-000-3/instant> a time:Instant ;
+    time:inXSDDateTime "2026-03-05T12:30:00"^^xsd:dateTime .
+
+<https://w3id.org/shift/kg/asset/BAT-002> a seas:Battery,
+        seas:ElectricPowerStorageSystem .
+
+<https://w3id.org/shift/kg/asset/BAT-007> a seas:Battery,
+        seas:ElectricPowerStorageSystem .
+
+<https://w3id.org/shift/kg/asset/HP-002> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/HP-004> a seas:HeatPump .
+
+<https://w3id.org/shift/kg/asset/LOAD-000> a seas:ElectricPowerConsumer,
+        seas:ElectricPowerSystem ;
+    seas:connectedTo <https://w3id.org/shift/kg/node/Inishmore> .
+
+<https://w3id.org/shift/kg/asset/METER-000> a seas:Device,
+        seas:ElectricPowerSystem ;
+    seas:connectedTo <https://w3id.org/shift/kg/node/Inishmore> ;
+    seas:hasProperty <https://w3id.org/shift/kg/property/ActivePower> .
+
+<https://w3id.org/shift/kg/asset/PV-001> a seas:ElectricPowerProducer,
+        seas:ElectricPowerSystem,
+        seas:PhotovoltaicPanel ;
+    seas:connectedTo <https://w3id.org/shift/kg/node/Inishmaan> .
+
+<https://w3id.org/shift/kg/node/Inishmore> a seas:ElectricPowerSystem ;
+    seas:connectedTo <https://w3id.org/shift/kg/asset/LOAD-000>,
+        <https://w3id.org/shift/kg/asset/METER-000> .
+
+<https://w3id.org/shift/kg/property/ActivePower> a seas:Property ;
+    seas:evaluation <https://w3id.org/shift/kg/obs/METER-000-1>,
+        <https://w3id.org/shift/kg/obs/METER-000-2>,
+        <https://w3id.org/shift/kg/obs/METER-000-3> .
+

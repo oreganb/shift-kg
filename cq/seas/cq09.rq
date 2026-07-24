@@ -1,0 +1,14 @@
+# CQ-09 in SEAS -- ANSWERABLE.
+# seas:Building, seas:HeatPump and seas:Battery all exist, and seas:hasPart
+# gives building composition, so presence-and-absence is directly expressible.
+PREFIX seas: <https://w3id.org/seas/>
+SELECT ?building WHERE {
+  ?building a seas:Building ;
+            seas:hasPart ?heatPump .
+  ?heatPump a seas:HeatPump .
+  FILTER NOT EXISTS {
+    ?building seas:hasPart ?battery .
+    ?battery a seas:Battery .
+  }
+}
+ORDER BY ?building

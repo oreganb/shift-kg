@@ -1,0 +1,26 @@
+# CQ-14  Which pending trades in window W are between mutually trusted
+#        same-community parties?
+# Group D (trading and market operations). Basis: SHIFT-RR-16.
+#
+# Parameters (method note 5): the window bounds and which trade status counts
+# as pending. Both are RR-16 defaults.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?trade ?buyer ?seller
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?PENDING_STATUS { "Pending"^^xsd:string }               # RR-16 default
+  VALUES ?WINDOW_START   { "2026-03-02T00:00:00"^^xsd:dateTime } # graph epoch
+  VALUES ?WINDOW_END     { "2026-03-09T00:00:00"^^xsd:dateTime } # graph clock
+  # ----------------------------------------------------------------------
+  ?trade a shift:FlexibilityTrade ;
+         shift:buyerActor ?buyer ;
+         shift:sellerActor ?seller ;
+         shift:tradeStatus ?PENDING_STATUS ;
+         shift:tradeStartTime ?tradeStart .
+  FILTER(?tradeStart >= ?WINDOW_START && ?tradeStart < ?WINDOW_END)
+  ?buyer  shift:mutuallyTrusted ?seller .
+  ?buyer  shift:belongsToCMC ?cmc .
+  ?seller shift:belongsToCMC ?cmc .
+}
+ORDER BY ?trade

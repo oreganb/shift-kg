@@ -1,0 +1,27 @@
+# CQ-10  Which flexibility services are active at node N and what capacity is
+#        committed in window W?
+# Group C (services, contracts, obligations). Basis: SHIFT-RR-19.
+#
+# Parameters (method note 5): the node, the window bounds, and what counts as
+# "active". Window defaults to the 90-day settlement lookback.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?service (SUM(?committed) AS ?committedCapacity_kW)
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?NODE           { <https://w3id.org/shift/kg/node/Inishmore> }
+  VALUES ?WINDOW_START   { "2025-12-09T00:00:00"^^xsd:dateTime } # NOW - 90d
+  VALUES ?WINDOW_END     { "2026-03-09T00:00:00"^^xsd:dateTime } # graph clock
+  VALUES ?ACTIVE_STATUS  { "Active"^^xsd:string }                # RR-19 default
+  # ----------------------------------------------------------------------
+  ?service a shift:FlexibilityService ;
+           shift:linkedToNode ?NODE ;
+           shift:isActive true ;
+           shift:serviceStatus ?ACTIVE_STATUS ;
+           shift:hasDeliveryEvent ?event .
+  ?event shift:committedValue_kW ?committed ;
+         shift:eventTimestamp ?eventTime .
+  FILTER(?eventTime >= ?WINDOW_START && ?eventTime < ?WINDOW_END)
+}
+GROUP BY ?service
+ORDER BY ?service

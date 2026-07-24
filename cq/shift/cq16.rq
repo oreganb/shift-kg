@@ -1,0 +1,22 @@
+# CQ-16  Which trades were still pending/in-progress after their delivery
+#        window closed?
+# Group D (trading and market operations). Basis: SHIFT-RR-04 (expired trade).
+#
+# Parameters (method note 5): the graph clock, and which statuses count as
+# still open. Both are RR-04 defaults.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?trade ?tradeStatus ?deliveryEndTime
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?NOW         { "2026-03-09T00:00:00"^^xsd:dateTime }   # graph clock
+  VALUES ?OPEN_STATUS { "Pending"^^xsd:string                   # RR-04 default
+                        "InProgress"^^xsd:string }
+  # ----------------------------------------------------------------------
+  BIND(?OPEN_STATUS AS ?tradeStatus)
+  ?trade a shift:FlexibilityTrade ;
+         shift:tradeStatus ?OPEN_STATUS ;
+         shift:deliveryEndTime ?deliveryEndTime .
+  FILTER(?deliveryEndTime < ?NOW)
+}
+ORDER BY ?trade

@@ -1,0 +1,15 @@
+# SHIFT-RR-02 : Infer congestion point node
+# Expressible in SWRL: YES (swrlb:greaterThan / swrlb:lessThan)
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT {
+  ?n shift:isCongestionPoint true ;
+     shift:congestionRiskScore "0.8"^^xsd:decimal .
+}
+WHERE {
+  ?n a shift:Node ;
+     shift:totalConnectedLoad_kW ?load ;
+     shift:totalDERCapacity_kW ?der ;
+     shift:isPeerTradeEnabled true .
+  FILTER(?load > 500 && ?der < 100)
+}

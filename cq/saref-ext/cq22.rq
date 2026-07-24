@@ -1,0 +1,13 @@
+# CQ-22 in SAREF Core + 4ENER + 4BLDG -- ANSWERABLE.
+# Core supplies the commands (saref:Function / saref:Command / saref:hasCommand)
+# but had no way to order them. s4ener:hasIndex (xsd:integer, no declared
+# domain, whose stated purpose is indexing array elements) supplies the step
+# order, so the SEQUENCE the question asks for is now expressible.
+PREFIX saref:  <https://saref.etsi.org/core/>
+PREFIX s4ener: <https://saref.etsi.org/saref4ener/>
+SELECT ?command ?stepOrder WHERE {
+  ?device saref:hasFunction ?function .
+  ?function saref:hasCommand ?command .
+  ?command s4ener:hasIndex ?stepOrder .
+}
+ORDER BY ?stepOrder

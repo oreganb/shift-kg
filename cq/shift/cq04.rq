@@ -1,0 +1,20 @@
+# CQ-04  Which actors belong to the same community/trust group as actor X?
+# Group A (actors and roles). Basis: CommunityMarketCircle (CMC) membership.
+#
+# Parameters (method note 5): the reference actor. Community membership is
+# structural, so no numeric threshold applies. The mutual-trust flag is
+# reported per peer rather than filtered on, so the caller can read membership
+# and trust separately.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?peer ?cmc ?mutuallyTrusted
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?ACTOR { <https://w3id.org/shift/kg/actor/A000> }
+  # ----------------------------------------------------------------------
+  ?ACTOR shift:belongsToCMC ?cmc .
+  ?peer  shift:belongsToCMC ?cmc .
+  FILTER(?peer != ?ACTOR)
+  BIND(EXISTS { ?ACTOR shift:mutuallyTrusted ?peer } AS ?mutuallyTrusted)
+}
+ORDER BY ?peer

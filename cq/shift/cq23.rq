@@ -1,0 +1,34 @@
+# CQ-23  What was the observed time-series value of property P of device D at
+#        time T?
+# Group F -- SHIFT is EXPECTED TO FAIL this.
+#
+# Parameters (method note 5): the device and the observation time.
+#
+# MISSING TERM. SHIFT stores last-capture attributes only, exactly as the CQ
+# text says. It declares shift:lastDataCaptureTime, shift:lastReadTime and
+# shift:lastResponseTimestamp -- single-valued scalars overwritten on each
+# read. There is:
+#   - no Observation / Measurement class, so a value cannot be reified
+#     together with its time;
+#   - no result / hasValue property pairing a magnitude with a timestamp;
+#   - no observed-property term, so P cannot be named.
+# Consequently the graph holds at most ONE value per device and no history:
+# a query for time T is not merely unanswered, it is unrepresentable.
+# The nearest equivalents are saref:Measurement (saref:hasTimestamp,
+# saref:hasValue, saref:relatesToProperty) and sosa:Observation
+# (sosa:resultTime, sosa:hasSimpleResult, sosa:observedProperty).
+#
+# The query below is the closest SHIFT admits and returns nothing.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?device ?lastDataCaptureTime ?lastReadTime
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?DEVICE  { <https://w3id.org/shift/kg/asset/METER-000> }
+  VALUES ?AT_TIME { "2026-03-05T12:00:00"^^xsd:dateTime }
+  # ----------------------------------------------------------------------
+  BIND(?DEVICE AS ?device)
+  ?DEVICE shift:lastDataCaptureTime ?lastDataCaptureTime .
+  OPTIONAL { ?DEVICE shift:lastReadTime ?lastReadTime }
+  FILTER(?lastDataCaptureTime = ?AT_TIME)
+}

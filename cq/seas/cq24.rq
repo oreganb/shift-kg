@@ -1,0 +1,20 @@
+# CQ-24 in SEAS -- PARTIAL.
+# SEAS is the only one of the three ontologies with the activity taxonomy at
+# all: seas:Activity with ForecastingActivity, PlanningActivity and
+# OptimizationActivity. SHIFT has no activity class whatsoever.
+# Two things stop it being a full answer:
+#   - NO AGENCY PROPERTY. No property in SEAS has domain seas:Actor or range
+#     seas:Activity. The link below uses seas:contains, an untyped transitive
+#     containment property with no domain or range, which does not assert that
+#     the actor PERFORMS the activity.
+#   - NO "CURRENTLY". seas:temporalContext has domain TimeContextualizedEvaluation,
+#     so an Activity cannot be time-qualified.
+PREFIX seas: <https://w3id.org/seas/>
+SELECT ?activity WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?ACTOR { <https://w3id.org/shift/kg/actor/A000> }
+  # ----------------------------------------------------------------------
+  ?ACTOR seas:contains ?activity .
+  ?activity a seas:Activity .
+}
+ORDER BY ?activity

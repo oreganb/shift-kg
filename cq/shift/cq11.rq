@@ -1,0 +1,36 @@
+# CQ-11  Which services are persistently under-delivering against commitments?
+# Group C (services, contracts, obligations). Basis: SHIFT-RR-17.
+#
+# Parameters (method note 5): the delivery ratio below which an event counts as
+# an under-delivery, how many such events make it "persistent", and the window.
+# All three are RR-17 defaults.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?service ?underDeliveries
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?MIN_UNDER_DELIVERIES { 3 }          # RR-17 default
+  # ----------------------------------------------------------------------
+  {
+    SELECT ?service (COUNT(DISTINCT ?event) AS ?underDeliveries)
+    WHERE {
+      # -- parameters ----------------------------------------------------
+      VALUES ?DELIVERY_RATIO { 0.8 }          # RR-17 default
+      VALUES ?NOW            { "2026-03-09T00:00:00"^^xsd:dateTime }
+      VALUES ?WINDOW_DAYS    { 90 }           # RR-17 default
+      # ------------------------------------------------------------------
+      BIND(?NOW - STRDT(CONCAT("P", STR(?WINDOW_DAYS), "D"),
+                        xsd:dayTimeDuration) AS ?windowStart)
+      ?service a shift:FlexibilityService ;
+               shift:hasDeliveryEvent ?event .
+      ?event shift:committedValue_kW ?committed ;
+             shift:measuredResponse_kW ?measured ;
+             shift:eventTimestamp ?eventTime .
+      FILTER(?eventTime >= ?windowStart && ?eventTime <= ?NOW)
+      FILTER(?committed > 0 && (?measured / ?committed) < ?DELIVERY_RATIO)
+    }
+    GROUP BY ?service
+  }
+  FILTER(?underDeliveries >= ?MIN_UNDER_DELIVERIES)
+}
+ORDER BY ?service

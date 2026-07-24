@@ -1,0 +1,19 @@
+Copyright (c) 2026 Brian O'Regan, Tyndall National Institute / IERC,
+University College Cork.
+
+DUAL LICENCE — the ontology and data are licensed separately from the code.
+
+1. ONTOLOGY AND KNOWLEDGE GRAPH
+   ontology/*.ttl, kg/*.ttl, rules/**  are licensed under the
+   Creative Commons Attribution 4.0 International Licence (CC BY 4.0).
+   https://creativecommons.org/licenses/by/4.0/
+
+2. SOFTWARE
+   generator/*.py, eval/*.py  are licensed under the Apache License 2.0.
+   https://www.apache.org/licenses/LICENSE-2.0
+
+FUNDING
+   CET Partnership Joint Call 2023, ref Cetp-FP2023-00114. Co-funded by the
+   European Commission (GA No. 101069750) and national funding organisations
+   including SEAI (Ireland), IFD (Denmark), FFG (Austria), TUBITAK (Turkiye),
+   SEA (Sweden) and UEFISCDI (Romania).

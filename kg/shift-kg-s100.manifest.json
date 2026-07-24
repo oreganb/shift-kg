@@ -1,0 +1,32 @@
+{
+ "params": {
+  "actors": 100,
+  "days": 14,
+  "seed": 42,
+  "out": "kg/shift-kg-s100.ttl"
+ },
+ "triples": 28772,
+ "individuals": 3710,
+ "actors": 100,
+ "assets": 408,
+ "services": 70,
+ "contracts": 70,
+ "trade_windows": 672,
+ "trades": 995,
+ "activation_events": 990,
+ "ground_truth_counts": {
+  "RR-00": 72,
+  "RR-01": 90,
+  "RR-02": 2,
+  "RR-03": 66,
+  "RR-04": 363,
+  "RR-09": 13,
+  "RR-16": 2,
+  "RR-17": 19,
+  "RR-21": 8,
+  "RR-23": 1,
+  "RR-27": 335,
+  "RR-28": 59,
+  "RR-29": 30
+ }
+}

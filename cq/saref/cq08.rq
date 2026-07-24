@@ -1,0 +1,13 @@
+# CQ-08 in SAREF Core v4.1.1 -- PARTIAL.
+# Activations map to saref:CommandExecution and carry saref:hasTimestamp, so
+# the DENOMINATOR of a failure ratio is available. SAREF Core declares no
+# outcome or status on an execution, so the NUMERATOR is not: the query can
+# count activations per device but cannot tell a failure from a success.
+PREFIX saref: <https://saref.etsi.org/core/>
+SELECT ?asset (COUNT(DISTINCT ?execution) AS ?activations) WHERE {
+  ?execution a saref:CommandExecution ;
+             saref:madeBy ?asset ;
+             saref:hasTimestamp ?ts .
+}
+GROUP BY ?asset
+ORDER BY ?asset

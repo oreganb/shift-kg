@@ -1,0 +1,15 @@
+# SHIFT-RR-17 : Flag underperformance (>=3 under-deliveries in 90 days)
+# Expressible in SWRL: NO — COUNT plus a temporal window.
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT { ?s shift:isUnderperforming true }
+WHERE {
+  SELECT ?s (COUNT(DISTINCT ?e) AS ?n) WHERE {
+    ?s a shift:FlexibilityService ;
+       shift:hasDeliveryEvent ?e .
+    ?e shift:committedValue_kW ?c ;
+       shift:measuredResponse_kW ?m ;
+       shift:eventTimestamp ?ts .
+    FILTER(?c > 0 && (?m / ?c) < 0.8)
+    FILTER(?ts > ?CUTOFF90)
+  } GROUP BY ?s HAVING (COUNT(DISTINCT ?e) >= 3)
+}

@@ -1,0 +1,12 @@
+# CQ-06 in SAREF Core v4.1.1 -- PARTIAL.
+# Controllability is expressible: an Actuator with a Function and Commands.
+# The other two constraints are not. SAREF Core has no siting term (node N)
+# and no response-time property, so the query below can only return
+# controllable devices, unfiltered by location or by T milliseconds.
+PREFIX saref: <https://saref.etsi.org/core/>
+SELECT ?asset WHERE {
+  ?asset a saref:Actuator ;
+         saref:hasFunction ?function .
+  ?function saref:hasCommand ?command .
+}
+ORDER BY ?asset

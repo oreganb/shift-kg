@@ -1,0 +1,14 @@
+# SHIFT-RR-21 : Recommend battery storage for flexumers with solar excess
+# Expressible in SWRL: NO — requires negation as failure (owns no battery).
+# SWRL is monotonic; "does not own a battery" is not expressible.
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT { ?a shift:recommendBatteryStorage true }
+WHERE {
+  ?a a shift:Actor ;
+     shift:ownsAsset ?pv ;
+     shift:avgMonthlyGeneration_kWh ?gen ;
+     shift:avgMonthlyConsumption_kWh ?cons .
+  ?pv a shift:SolarPVAsset .
+  FILTER(?gen > ?cons)
+  FILTER NOT EXISTS { ?a shift:ownsAsset ?b . ?b a shift:BatteryAsset }
+}

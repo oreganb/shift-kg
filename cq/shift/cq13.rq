@@ -1,0 +1,23 @@
+# CQ-13  What penalty rate applies to a given trade via its contract?
+# Group C (services, contracts, obligations).
+#
+# Parameters (method note 5): the trade of interest. No threshold applies --
+# this is a traversal, not a rule.
+#
+# NOTE this returns nothing on the aran graph. The traversal term exists in the
+# TBox (shift:relatedContract, domain shift:FlexibilityTrade, range
+# shift:FlexibilityContract) and shift:penaltyRate_EURperkWh is populated on
+# every contract, but the v0.1.1 generator asserts no relatedContract triple, so
+# no trade reaches a contract. The gold answer is empty too. Recorded as
+# vacuous. The gap is in the ABox, not the vocabulary.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?trade ?contract ?penaltyRate_EURperkWh
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?TRADE { <https://w3id.org/shift/kg/trade/T00000> }
+  # ----------------------------------------------------------------------
+  BIND(?TRADE AS ?trade)
+  ?trade shift:relatedContract ?contract .
+  ?contract shift:penaltyRate_EURperkWh ?penaltyRate_EURperkWh .
+}

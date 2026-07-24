@@ -1,0 +1,18 @@
+# SHIFT-RR-27 : Require consent for trading outside CMC
+# Expressible in SWRL: PARTIALLY — needs owl:differentFrom or a UNA assumption
+# for ?c1 != ?c2. Under the open-world assumption two CMC individuals are not
+# distinct unless asserted so. The runner asserts an all-different axiom.
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT {
+  ?t shift:tradeStatus "PendingConsent" ;
+     shift:tradeBlockReason "CMCConsentRequired" .
+}
+WHERE {
+  ?t a shift:FlexibilityTrade ;
+     shift:buyerActor ?b ;
+     shift:sellerActor ?s ;
+     shift:hasCMCConsent false .
+  ?b shift:belongsToCMC ?c1 .
+  ?s shift:belongsToCMC ?c2 .
+  FILTER(?c1 != ?c2)
+}

@@ -1,0 +1,24 @@
+# CQ-07  Which assets of actor X are storage-capable and currently available?
+# Group B (assets and flexibility).
+#
+# Parameters (method note 5): the actor, and what "currently available" means
+# operationally (availability flag plus operating status).
+#
+# The default actor is A002 -- the lowest-numbered actor in the aran graph that
+# owns any storage-capable asset. A000, the default used by the other
+# actor-scoped CQs, owns none, which would make this query trivially empty and
+# test nothing. The selection rule is stated rather than tuned.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?asset
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?ACTOR           { <https://w3id.org/shift/kg/actor/A002> }
+  VALUES ?REQUIRED_STATUS { "Online"^^xsd:string }   # operational default
+  # ----------------------------------------------------------------------
+  ?ACTOR shift:ownsAsset ?asset .
+  ?asset shift:canStoreEnergy true ;
+         shift:isAvailable true ;
+         shift:operatingStatus ?REQUIRED_STATUS .
+}
+ORDER BY ?asset

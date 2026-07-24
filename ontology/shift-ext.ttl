@@ -1,0 +1,729 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shift: <https://w3id.org/shift/core#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+shift:BaseDynamicPlan a owl:Class ;
+    rdfs:label "BaseDynamicPlan"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf shift:TariffPlan ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-20. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:BatteryAsset a owl:Class ;
+    rdfs:label "BatteryAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf shift:StorageAsset ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18, RR-21. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:HeatPumpAsset a owl:Class ;
+    rdfs:label "HeatPumpAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf shift:ThermalAsset ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:SolarPVAsset a owl:Class ;
+    rdfs:label "SolarPVAsset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf shift:GenerationAsset ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18, RR-21. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:activationReason a owl:DatatypeProperty ;
+    rdfs:label "activationReason"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-05. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:activationWindowEnd a owl:DatatypeProperty ;
+    rdfs:label "activationWindowEnd"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:activationWindowStart a owl:DatatypeProperty ;
+    rdfs:label "activationWindowStart"@en ;
+    rdfs:comment "The documentation's 'activationWindow' is an interval; split into start/end because SPARQL/SWRL cannot compare opaque interval literals."@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:assetFunction a owl:DatatypeProperty ;
+    rdfs:label "assetFunction"@en ;
+    rdfs:comment "One of consumption | generation | storage | thermal."@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-00, RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:assignedAsset a owl:ObjectProperty ;
+    rdfs:label "assignedAsset"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Asset ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-07. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:associatedActor a owl:ObjectProperty ;
+    rdfs:label "associatedActor"@en ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Actor ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-26. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:associatedContract a owl:ObjectProperty ;
+    rdfs:label "associatedContract"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:FlexibilityContract ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-09, RR-12. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:atRiskOfOvercommitment a owl:DatatypeProperty ;
+    rdfs:label "atRiskOfOvercommitment"@en ;
+    rdfs:domain shift:Node ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-19. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:averageDeliveryRate_percent a owl:DatatypeProperty ;
+    rdfs:label "averageDeliveryRate_percent"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-14. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:avgMonthlyConsumption_kWh a owl:DatatypeProperty ;
+    rdfs:label "avgMonthlyConsumption_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-20, RR-21. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:avgMonthlyGeneration_kWh a owl:DatatypeProperty ;
+    rdfs:label "avgMonthlyGeneration_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-21. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:backupTrade a owl:ObjectProperty ;
+    rdfs:label "backupTrade"@en ;
+    rdfs:comment "Renamed from the documentation's 'backupTradeList': RDF has no list-valued object properties; multiplicity is expressed by repeated triples."@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:FlexibilityTrade ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-08. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:belongsToCMC a owl:ObjectProperty ;
+    rdfs:label "belongsToCMC"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:CommunityMarketCircle ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-16, RR-27. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:bonusStatus a owl:DatatypeProperty ;
+    rdfs:label "bonusStatus"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-30. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:bundleActivationWindowEnd a owl:DatatypeProperty ;
+    rdfs:label "bundleActivationWindowEnd"@en ;
+    rdfs:domain shift:FlexibilityBundle ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:bundleActivationWindowStart a owl:DatatypeProperty ;
+    rdfs:label "bundleActivationWindowStart"@en ;
+    rdfs:domain shift:FlexibilityBundle ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:buyerActor a owl:ObjectProperty ;
+    rdfs:label "buyerActor"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Actor ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-16, RR-27. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:canStoreEnergy a owl:DatatypeProperty ;
+    rdfs:label "canStoreEnergy"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:committedValue_kW a owl:DatatypeProperty ;
+    rdfs:label "committedValue_kW"@en ;
+    rdfs:domain shift:DeliveryEvent ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-17, RR-19. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:complianceAuditDate a owl:DatatypeProperty ;
+    rdfs:label "complianceAuditDate"@en ;
+    rdfs:comment "Renamed from the documentation's 'auditDate' / core's 'lastAuditDate' (v0.1.1): the core property of that name has domain PeerFlexClearingMechanism; reusing it for Actors would create an intersection-domain defect."@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-14. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:complianceScore a owl:DatatypeProperty ;
+    rdfs:label "complianceScore"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-14. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:conflictType a owl:DatatypeProperty ;
+    rdfs:label "conflictType"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-23. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:contractDeliveryWindow_min a owl:DatatypeProperty ;
+    rdfs:label "contractDeliveryWindow_min"@en ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:integer ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-26. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:contractEndDate a owl:DatatypeProperty ;
+    rdfs:label "contractEndDate"@en ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-09, RR-12. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:deliveryComplianceScore a owl:DatatypeProperty ;
+    rdfs:label "deliveryComplianceScore"@en ;
+    rdfs:domain shift:FlexibilityContract ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-26. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:deliveryEndTime a owl:DatatypeProperty ;
+    rdfs:label "deliveryEndTime"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-04, RR-06, RR-12, RR-22. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:deliveryStartTime a owl:DatatypeProperty ;
+    rdfs:label "deliveryStartTime"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-22. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:eligibleForBonus a owl:DatatypeProperty ;
+    rdfs:label "eligibleForBonus"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-29, RR-30. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:eligibleForDynamicTariff a owl:DatatypeProperty ;
+    rdfs:label "eligibleForDynamicTariff"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-03. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:eligibleForGreenRewards a owl:DatatypeProperty ;
+    rdfs:label "eligibleForGreenRewards"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-33. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:eventStatus a owl:DatatypeProperty ;
+    rdfs:label "eventStatus"@en ;
+    rdfs:domain shift:ActivationEvent ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-28. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:eventTimestamp a owl:DatatypeProperty ;
+    rdfs:label "eventTimestamp"@en ;
+    rdfs:comment "Domain left open: applies to DeliveryEvent and ActivationEvent."@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-17, RR-25, RR-28. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:forecastForNode a owl:ObjectProperty ;
+    rdfs:label "forecastForNode"@en ;
+    rdfs:comment "Associates a forecast with the grid node it forecasts for. Before this term SHIFT had no property relating ForecastData to Node in either direction: informedByForecast has domain ControlAsset or TradeWindow, linkedToForecast Asset or FlexibilitySchedule, referencedInForecast TariffPlan, and usedInForecast SensorAsset or SmartMeterAsset. The only available route was the two-hop indirection ForecastData -> FlexibilityService -> Node."@en ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Node ;
+    skos:note "Declared in SHIFT v1.0.0 to support CQ-20 (RR-02, RR-05). Not present in the pre-v1.0.0 artefacts."@en .
+
+shift:fossilEnergy_kWh a owl:DatatypeProperty ;
+    rdfs:label "fossilEnergy_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-32. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasActivationEvent a owl:ObjectProperty ;
+    rdfs:label "hasActivationEvent"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:ActivationEvent ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-28. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasBundleMember a owl:ObjectProperty ;
+    rdfs:label "hasBundleMember"@en ;
+    rdfs:comment "Renamed from the documentation's 'hasMember' (v0.1.1): core already declares hasMember with domain EnergyCommunity."@en ;
+    rdfs:domain shift:FlexibilityBundle ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:FlexibilityService ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasCMCConsent a owl:DatatypeProperty ;
+    rdfs:label "hasCMCConsent"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-27. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasDeliveryEvent a owl:ObjectProperty ;
+    rdfs:label "hasDeliveryEvent"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:DeliveryEvent ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-17. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasDynamicPricing a owl:DatatypeProperty ;
+    rdfs:label "hasDynamicPricing"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-23. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasFlatRate a owl:DatatypeProperty ;
+    rdfs:label "hasFlatRate"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-23. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasMultiWindowApproval a owl:DatatypeProperty ;
+    rdfs:label "hasMultiWindowApproval"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-22. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasScheduleConflict a owl:DatatypeProperty ;
+    rdfs:label "hasScheduleConflict"@en ;
+    rdfs:domain shift:FlexibilitySchedule ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-13. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasTariffConflict a owl:DatatypeProperty ;
+    rdfs:label "hasTariffConflict"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-23. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasTariffPlan a owl:ObjectProperty ;
+    rdfs:label "hasTariffPlan"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:TariffPlan ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-15, RR-20, RR-31. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:hasUnresolvedDisputes a owl:DatatypeProperty ;
+    rdfs:label "hasUnresolvedDisputes"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-14. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isAggregated a owl:DatatypeProperty ;
+    rdfs:label "isAggregated"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-24. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isAvailable a owl:DatatypeProperty ;
+    rdfs:label "isAvailable"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-07. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isCompliant a owl:DatatypeProperty ;
+    rdfs:label "isCompliant"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-26. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isControllable a owl:DatatypeProperty ;
+    rdfs:label "isControllable"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isFlexEligible a owl:DatatypeProperty ;
+    rdfs:label "isFlexEligible"@en ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-10. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isMobile a owl:DatatypeProperty ;
+    rdfs:label "isMobile"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isRemotelyControllable a owl:DatatypeProperty ;
+    rdfs:label "isRemotelyControllable"@en ;
+    rdfs:domain shift:ControlAsset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-10. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isStationary a owl:DatatypeProperty ;
+    rdfs:label "isStationary"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isTrustedAggregator a owl:DatatypeProperty ;
+    rdfs:label "isTrustedAggregator"@en ;
+    rdfs:domain shift:Aggregator ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-14. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:isUnderperforming a owl:DatatypeProperty ;
+    rdfs:label "isUnderperforming"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-17. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:lastReliabilityCheckDate a owl:DatatypeProperty ;
+    rdfs:label "lastReliabilityCheckDate"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:dateTime ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-28. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:latitude_deg a owl:DatatypeProperty ;
+    rdfs:label "latitude_deg"@en ;
+    rdfs:comment "geoDistance in the documentation is a computed function, not a stored property; coordinates are stored and distance computed at query time."@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:linkedToService a owl:ObjectProperty ;
+    rdfs:label "linkedToService"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:FlexibilityService ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-25. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:linkedToTrade a owl:ObjectProperty ;
+    rdfs:label "linkedToTrade"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:FlexibilityTrade ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-31. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:longitude_deg a owl:DatatypeProperty ;
+    rdfs:label "longitude_deg"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:maxMonthlyTrades a owl:DatatypeProperty ;
+    rdfs:label "maxMonthlyTrades"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:integer ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-15. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:measuredResponse_kW a owl:DatatypeProperty ;
+    rdfs:label "measuredResponse_kW"@en ;
+    rdfs:domain shift:DeliveryEvent ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-17. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:monthlyCarbonBalance_kgCO2 a owl:DatatypeProperty ;
+    rdfs:label "monthlyCarbonBalance_kgCO2"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-33. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:monthlyExport_kWh a owl:DatatypeProperty ;
+    rdfs:label "monthlyExport_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-29. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:monthlyImport_kWh a owl:DatatypeProperty ;
+    rdfs:label "monthlyImport_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-29. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:mutuallyTrusted a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "mutuallyTrusted"@en ;
+    rdfs:comment "Symmetric. The documentation assumes symmetry; it is asserted here."@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Actor ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-16. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:nodeCategory a owl:DatatypeProperty ;
+    rdfs:label "nodeCategory"@en ;
+    rdfs:domain shift:Node ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-11. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:ownsAsset a owl:ObjectProperty ;
+    rdfs:label "ownsAsset"@en ;
+    rdfs:comment "The single most load-bearing relation in the rule set; undeclared in the legacy artefacts, which is why RR-00 could never have fired."@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Asset ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-00, RR-03, RR-20, RR-21. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:predictedLoad_kW a owl:DatatypeProperty ;
+    rdfs:label "predictedLoad_kW"@en ;
+    rdfs:domain shift:ForecastData ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-05. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:recommendAggregatorEnrollment a owl:DatatypeProperty ;
+    rdfs:label "recommendAggregatorEnrollment"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-24. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:recommendBatteryStorage a owl:DatatypeProperty ;
+    rdfs:label "recommendBatteryStorage"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-21. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:recommendGreenUpgrade a owl:DatatypeProperty ;
+    rdfs:label "recommendGreenUpgrade"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-32. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:recommendRenewal a owl:DatatypeProperty ;
+    rdfs:label "recommendRenewal"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-12. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:recommendTariffReview a owl:DatatypeProperty ;
+    rdfs:label "recommendTariffReview"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-31. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:recommendedTariffPlan a owl:ObjectProperty ;
+    rdfs:label "recommendedTariffPlan"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:TariffPlan ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-20. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:reliabilityStatus a owl:DatatypeProperty ;
+    rdfs:label "reliabilityStatus"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-28. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:rewardEligibilityStatus a owl:DatatypeProperty ;
+    rdfs:label "rewardEligibilityStatus"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-29. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:sellerActor a owl:ObjectProperty ;
+    rdfs:label "sellerActor"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range shift:Actor ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-01, RR-16, RR-27. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:servicePerformanceScore a owl:DatatypeProperty ;
+    rdfs:label "servicePerformanceScore"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-12. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:serviceStatus a owl:DatatypeProperty ;
+    rdfs:label "serviceStatus"@en ;
+    rdfs:domain shift:FlexibilityService ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-09, RR-25. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:sustainabilityBadge a owl:DatatypeProperty ;
+    rdfs:label "sustainabilityBadge"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-33. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:sustainabilityScore a owl:DatatypeProperty ;
+    rdfs:label "sustainabilityScore"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:decimal ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-32. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:tariffPerformanceStatus a owl:DatatypeProperty ;
+    rdfs:label "tariffPerformanceStatus"@en ;
+    rdfs:domain shift:TariffPlan ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-31. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:totalConsumption_kWh a owl:DatatypeProperty ;
+    rdfs:label "totalConsumption_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-32. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:totalMonthlyTradeVolume_kWh a owl:DatatypeProperty ;
+    rdfs:label "totalMonthlyTradeVolume_kWh"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-24. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:tradeBlockReason a owl:DatatypeProperty ;
+    rdfs:label "tradeBlockReason"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-27. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:tradeCapReached a owl:DatatypeProperty ;
+    rdfs:label "tradeCapReached"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-15. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:tradeOutcome a owl:DatatypeProperty ;
+    rdfs:label "tradeOutcome"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-07, RR-08, RR-22. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:tradeRevenue_EUR a owl:DatatypeProperty ;
+    rdfs:label "tradeRevenue_EUR"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:float ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-31. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:tradeStatus a owl:DatatypeProperty ;
+    rdfs:label "tradeStatus"@en ;
+    rdfs:domain shift:FlexibilityTrade ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-01, RR-04, RR-06, RR-07, RR-08, RR-16, RR-22, RR-25, RR-27, RR-30. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:userType a owl:DatatypeProperty ;
+    rdfs:label "userType"@en ;
+    rdfs:domain shift:Actor ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:string ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-20. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:usesThermalEnergy a owl:DatatypeProperty ;
+    rdfs:label "usesThermalEnergy"@en ;
+    rdfs:domain shift:Asset ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:range xsd:boolean ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-18. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:CommunityMarketCircle a owl:Class ;
+    rdfs:label "CommunityMarketCircle"@en ;
+    rdfs:comment "A bounded trust/governance group of Actors within which trades may be fast-tracked. The legacy rule documentation asserts CMC 'is a defined concept in the ontology'; it was not."@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf shift:Actor ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-16, RR-27. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:ActivationEvent a owl:Class ;
+    rdfs:label "ActivationEvent"@en ;
+    rdfs:comment "A single activation attempt against an Asset, with outcome and timestamp."@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf owl:Thing ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-28. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:DeliveryEvent a owl:Class ;
+    rdfs:label "DeliveryEvent"@en ;
+    rdfs:comment "A single observed delivery of a FlexibilityService, carrying committed vs measured values and a timestamp. Required for any performance rule."@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf owl:Thing ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-17, RR-26. Not present in the pre-v0.1.0 artefacts."@en .
+
+shift:FlexibilityBundle a owl:Class ;
+    rdfs:label "FlexibilityBundle"@en ;
+    rdfs:comment "A geographically and temporally coherent group of FlexibilityService instances dispatched together."@en ;
+    rdfs:isDefinedBy <https://w3id.org/shift/ext> ;
+    rdfs:subClassOf owl:Thing ;
+    skos:note "Declared in SHIFT v0.1.0 to support RR-34. Not present in the pre-v0.1.0 artefacts."@en .
+
+<https://w3id.org/shift/ext> a owl:Ontology ;
+    dcterms:creator "Brian O'Regan" ;
+    dcterms:description "Vocabulary referenced by reasoning rules SHIFT-RR-00 to SHIFT-RR-34 but not declared in the legacy SHIFT artefacts. Without this module no SHIFT rule can be evaluated, because the terms in the rule bodies do not resolve."@en ;
+    dcterms:issued "2026-07-15"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2026-07-24"^^xsd:date ;
+    dcterms:publisher "Tyndall National Institute / IERC, University College Cork" ;
+    dcterms:title "SHIFT Ontology — Rule Vocabulary Extension"@en ;
+    vann:preferredNamespacePrefix "shift" ;
+    vann:preferredNamespaceUri "https://w3id.org/shift/core#" ;
+    rdfs:comment "Funded under the CET Partnership Joint Call 2023, ref Cetp-FP2023-00114. Co-funded by the European Commission (GA No. 101069750) and national funding organisations including SEAI (Ireland)."@en ;
+    owl:imports <https://w3id.org/shift/core> ;
+    owl:versionIRI <https://w3id.org/shift/ext/1.0.0> ;
+    owl:versionInfo "1.0.0" .
+

@@ -1,0 +1,27 @@
+# CQ-26  For a failed trade, which backup trade replaced it and with which
+#        seller?
+# Group G (added in self-review v0.2). Basis: SHIFT-RR-08 (backup sellers and
+# clearing logic).
+#
+# Parameters (method note 5): the trade status that triggers backup lookup.
+#
+# NOTE this returns nothing on the aran graph. The vocabulary is present and
+# correctly shaped -- shift:backupTrade, domain shift:FlexibilityTrade, range
+# shift:FlexibilityTrade -- and 41 trades carry status "Failed", but the v0.1.1
+# generator asserts no backupTrade triple, so no failed trade reaches a
+# replacement. The gold answer is empty too. Recorded as vacuous. The gap is in
+# the ABox, not the vocabulary: RR-08 is one of the 22 rules with no executable
+# SPARQL in this release.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?failedTrade ?backupTrade ?backupSeller
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?FAILED_STATUS { "Failed"^^xsd:string }   # RR-08 default
+  # ----------------------------------------------------------------------
+  ?failedTrade a shift:FlexibilityTrade ;
+               shift:tradeStatus ?FAILED_STATUS ;
+               shift:backupTrade ?backupTrade .
+  ?backupTrade shift:sellerActor ?backupSeller .
+}
+ORDER BY ?failedTrade

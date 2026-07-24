@@ -1,0 +1,1675 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/shift/kg/asset/BAT-018> a saref:Device ;
+    saref:hasIdentifier "BAT-018"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-000> a saref:Actuator ;
+    saref:hasFunction <https://w3id.org/shift/kg/function/Curtailment> ;
+    saref:hasIdentifier "CTRL-000"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-012> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-012"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-002> a saref:Device ;
+    saref:hasIdentifier "HP-002"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-010> a saref:Device ;
+    saref:hasIdentifier "HP-010"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-013> a saref:Device ;
+    saref:hasIdentifier "HP-013"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-000> a saref:Device ;
+    saref:hasIdentifier "LOAD-000"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-001> a saref:Device ;
+    saref:hasIdentifier "LOAD-001"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-002> a saref:Device ;
+    saref:hasIdentifier "LOAD-002"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-003> a saref:Device ;
+    saref:hasIdentifier "LOAD-003"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-004> a saref:Device ;
+    saref:hasIdentifier "LOAD-004"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-005> a saref:Device ;
+    saref:hasIdentifier "LOAD-005"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-006> a saref:Device ;
+    saref:hasIdentifier "LOAD-006"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-007> a saref:Device ;
+    saref:hasIdentifier "LOAD-007"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-008> a saref:Device ;
+    saref:hasIdentifier "LOAD-008"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-009> a saref:Device ;
+    saref:hasIdentifier "LOAD-009"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-010> a saref:Device ;
+    saref:hasIdentifier "LOAD-010"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-011> a saref:Device ;
+    saref:hasIdentifier "LOAD-011"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-012> a saref:Device ;
+    saref:hasIdentifier "LOAD-012"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-013> a saref:Device ;
+    saref:hasIdentifier "LOAD-013"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-014> a saref:Device ;
+    saref:hasIdentifier "LOAD-014"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-015> a saref:Device ;
+    saref:hasIdentifier "LOAD-015"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-016> a saref:Device ;
+    saref:hasIdentifier "LOAD-016"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-017> a saref:Device ;
+    saref:hasIdentifier "LOAD-017"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-018> a saref:Device ;
+    saref:hasIdentifier "LOAD-018"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-019> a saref:Device ;
+    saref:hasIdentifier "LOAD-019"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-020> a saref:Device ;
+    saref:hasIdentifier "LOAD-020"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-021> a saref:Device ;
+    saref:hasIdentifier "LOAD-021"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-022> a saref:Device ;
+    saref:hasIdentifier "LOAD-022"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-023> a saref:Device ;
+    saref:hasIdentifier "LOAD-023"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-024> a saref:Device ;
+    saref:hasIdentifier "LOAD-024"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/LOAD-025> a saref:Device ;
+    saref:hasIdentifier "LOAD-025"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-000> a saref:Meter ;
+    saref:hasIdentifier "METER-000"^^xsd:string ;
+    saref:hasProperty <https://w3id.org/shift/kg/property/ActivePower> ;
+    saref:hasPropertyValue <https://w3id.org/shift/kg/obs/METER-000-1>,
+        <https://w3id.org/shift/kg/obs/METER-000-2>,
+        <https://w3id.org/shift/kg/obs/METER-000-3> ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-001> a saref:Meter ;
+    saref:hasIdentifier "METER-001"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-002> a saref:Meter ;
+    saref:hasIdentifier "METER-002"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-003> a saref:Meter ;
+    saref:hasIdentifier "METER-003"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-004> a saref:Meter ;
+    saref:hasIdentifier "METER-004"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-005> a saref:Meter ;
+    saref:hasIdentifier "METER-005"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-006> a saref:Meter ;
+    saref:hasIdentifier "METER-006"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-007> a saref:Meter ;
+    saref:hasIdentifier "METER-007"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-008> a saref:Meter ;
+    saref:hasIdentifier "METER-008"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-009> a saref:Meter ;
+    saref:hasIdentifier "METER-009"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-010> a saref:Meter ;
+    saref:hasIdentifier "METER-010"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-011> a saref:Meter ;
+    saref:hasIdentifier "METER-011"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-012> a saref:Meter ;
+    saref:hasIdentifier "METER-012"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-013> a saref:Meter ;
+    saref:hasIdentifier "METER-013"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-014> a saref:Meter ;
+    saref:hasIdentifier "METER-014"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-015> a saref:Meter ;
+    saref:hasIdentifier "METER-015"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-016> a saref:Meter ;
+    saref:hasIdentifier "METER-016"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-017> a saref:Meter ;
+    saref:hasIdentifier "METER-017"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-018> a saref:Meter ;
+    saref:hasIdentifier "METER-018"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-019> a saref:Meter ;
+    saref:hasIdentifier "METER-019"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-020> a saref:Meter ;
+    saref:hasIdentifier "METER-020"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-021> a saref:Meter ;
+    saref:hasIdentifier "METER-021"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-022> a saref:Meter ;
+    saref:hasIdentifier "METER-022"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-023> a saref:Meter ;
+    saref:hasIdentifier "METER-023"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-024> a saref:Meter ;
+    saref:hasIdentifier "METER-024"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/METER-025> a saref:Meter ;
+    saref:hasIdentifier "METER-025"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-001> a saref:Device ;
+    saref:hasIdentifier "PV-001"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-002> a saref:Device ;
+    saref:hasIdentifier "PV-002"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-003> a saref:Device ;
+    saref:hasIdentifier "PV-003"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-004> a saref:Device ;
+    saref:hasIdentifier "PV-004"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-006> a saref:Device ;
+    saref:hasIdentifier "PV-006"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-007> a saref:Device ;
+    saref:hasIdentifier "PV-007"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-009> a saref:Device ;
+    saref:hasIdentifier "PV-009"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-011> a saref:Device ;
+    saref:hasIdentifier "PV-011"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-012> a saref:Device ;
+    saref:hasIdentifier "PV-012"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-013> a saref:Device ;
+    saref:hasIdentifier "PV-013"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-015> a saref:Device ;
+    saref:hasIdentifier "PV-015"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-016> a saref:Device ;
+    saref:hasIdentifier "PV-016"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-017> a saref:Device ;
+    saref:hasIdentifier "PV-017"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-019> a saref:Device ;
+    saref:hasIdentifier "PV-019"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-020> a saref:Device ;
+    saref:hasIdentifier "PV-020"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-022> a saref:Device ;
+    saref:hasIdentifier "PV-022"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-024> a saref:Device ;
+    saref:hasIdentifier "PV-024"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/PV-025> a saref:Device ;
+    saref:hasIdentifier "PV-025"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/building/B-000> saref:hasIdentifier "B-000"^^xsd:string .
+
+<https://w3id.org/shift/kg/building/B-001> saref:hasIdentifier "B-001"^^xsd:string .
+
+<https://w3id.org/shift/kg/building/B-002> saref:hasIdentifier "B-002"^^xsd:string .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T15:57:57.829119"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T13:16:14.725211"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T17:30:07.062708"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T06:33:09.013328"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T17:21:47.972354"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T16:33:12.856748"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T10:21:23.799753"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-002-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T19:53:03.982434"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-002> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T16:29:27.866761"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T02:59:34.416690"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T21:08:56.960149"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T05:57:59.291683"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T13:15:08.277700"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T09:53:24.799211"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T09:14:37.685577"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T10:10:05.886444"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T09:59:23.045441"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T16:56:39.773190"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T21:13:26.004372"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-007-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T05:57:37.205455"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-007> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-16T12:45:01.382353"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T03:38:55.523281"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T10:54:07.011842"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-16T20:06:35.372599"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T13:45:45.117024"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T04:07:25.567909"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T21:51:25.541126"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T04:42:48.965395"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T21:48:13.017564"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T15:51:23.962361"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T08:25:29.904969"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-014-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T06:20:51.061531"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-014> .
+
+<https://w3id.org/shift/kg/event/act/BAT-019-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T11:57:39.669068"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-019> .
+
+<https://w3id.org/shift/kg/event/act/BAT-019-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T20:34:29.265329"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-019> .
+
+<https://w3id.org/shift/kg/event/act/BAT-019-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T18:03:14.693423"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-019> .
+
+<https://w3id.org/shift/kg/event/act/BAT-019-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T13:32:51.031742"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-019> .
+
+<https://w3id.org/shift/kg/event/act/BAT-019-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T00:00:45.322678"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-019> .
+
+<https://w3id.org/shift/kg/event/act/BAT-019-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T09:17:05.502924"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-019> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T13:32:59.526011"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T04:30:16.571686"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T13:06:41.384622"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T06:00:30.302877"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T09:05:33.923550"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T06:21:42.283093"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T09:09:31.288945"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T18:48:01.014681"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T01:55:55.931642"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T13:34:40.261936"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T06:57:42.073371"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/BAT-021-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T22:04:25.866419"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/BAT-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-001-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T02:27:24.739091"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-001> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-001-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T18:00:06.946004"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-001> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-001-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T20:21:54.406649"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-001> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-001-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T13:43:01.635388"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-001> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-001-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T05:45:39.065070"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-001> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-001-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T18:22:25.305856"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-001> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-004-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T07:06:14.819934"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-004> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-004-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T23:31:12.951290"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-004> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-004-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T10:35:36.633333"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-004> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-004-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T19:31:58.150141"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-004> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-004-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T18:10:20.097641"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-004> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-004-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T10:36:48.692748"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-004> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T17:01:07.602438"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T01:51:17.627017"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T08:35:58.972858"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T05:39:48.801803"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T13:22:23.534948"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T10:49:30.181254"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T19:55:52.270330"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T09:24:26.812947"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T21:01:03.743283"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T12:35:32.228242"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T05:17:10.812413"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-008-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T14:05:35.604903"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-008> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T03:37:05.104576"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T02:28:58.717983"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T23:13:06.195863"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T05:47:14.729494"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T06:25:03.713062"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T16:59:56.716292"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T19:47:52.790692"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T19:07:05.606748"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T14:07:15.407885"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T16:17:57.114022"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T21:54:49.750977"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-010-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T13:50:35.960012"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-010> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T21:31:40.182639"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T12:38:40.120457"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T08:53:34.243126"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T04:31:24.221435"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T23:55:46.862779"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T19:02:02.077560"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T23:42:27.505876"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T06:44:38.753037"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T00:49:21.443651"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T21:26:53.575083"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T20:55:49.320802"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-011-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T10:29:35.196562"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-011> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T01:39:39.863012"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T15:29:51.918319"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T06:35:04.035287"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T20:36:34.697273"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T03:03:18.570282"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T01:38:09.463741"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T18:53:33.424011"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-013-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T06:01:00.964421"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-013> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-017-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T17:26:31.283542"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-017> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-017-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T13:03:40.359498"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-017> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-017-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T13:28:34.288221"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-017> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-017-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T20:13:07.730785"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-017> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-017-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T22:23:36.651095"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-017> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-017-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T22:20:39.395541"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-017> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T02:16:18.590972"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T14:49:18.624827"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T02:03:09.507043"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T04:49:38.630167"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T20:09:10.852512"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T00:14:55.867190"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T11:55:32.516448"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-019-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T03:02:41.344483"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-019> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T16:06:51.217323"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T04:56:39.602232"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T12:29:39.723110"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T16:16:09.339548"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T20:41:42.576915"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T14:30:09.035099"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T03:36:49.404745"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-021-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T22:31:19.388060"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-021> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T18:40:28.951491"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T17:44:20.065530"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T22:03:13.517083"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T18:48:47.705058"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-16T03:14:39.524719"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T17:13:39.845286"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T13:21:37.588564"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T20:49:44.219425"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T23:34:43.645334"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T12:15:34.702341"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T04:05:03.666235"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/CTRL-023-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T10:20:53.345570"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/CTRL-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T07:49:14.692990"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T07:45:29.790487"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T17:34:53.474836"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T01:53:12.160440"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T10:47:55.725031"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T01:01:14.905721"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T23:28:10.683059"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-003-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T02:14:10.588520"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-003> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T21:52:41.139059"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T20:01:08.428135"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T12:02:17.575068"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T07:41:52.076582"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T13:11:58.674100"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T05:00:41.595447"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T04:42:30.371105"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T19:57:13.701833"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T12:59:54.496538"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T17:19:21.736691"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T04:42:14.669763"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-011-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T03:08:52.226708"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-011> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T15:43:12.290241"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T01:49:29.537037"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T20:06:27.408592"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T15:36:18.946699"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T13:33:10.755082"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T23:24:55.017516"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T01:03:40.392044"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T17:16:25.702676"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T11:20:07.843072"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T16:23:38.671581"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T13:31:56.417092"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-015-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T20:33:54.910824"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-015> .
+
+<https://w3id.org/shift/kg/event/act/EV-020-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T12:53:13.391217"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-020> .
+
+<https://w3id.org/shift/kg/event/act/EV-020-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T05:12:11.528375"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-020> .
+
+<https://w3id.org/shift/kg/event/act/EV-020-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T01:54:25.254403"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-020> .
+
+<https://w3id.org/shift/kg/event/act/EV-020-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T16:47:59.234018"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-020> .
+
+<https://w3id.org/shift/kg/event/act/EV-020-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-16T22:26:33.233761"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-020> .
+
+<https://w3id.org/shift/kg/event/act/EV-020-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T08:15:30.489871"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-020> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T12:48:05.951966"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T14:58:06.040520"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T16:06:33.550656"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T12:58:27.254634"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T02:33:30.858409"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T07:43:23.491107"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T17:10:25.513590"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/EV-023-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T09:15:23.724858"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/EV-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T22:53:03.587499"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T13:54:14.118794"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T16:49:57.510126"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T19:53:26.841815"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T18:31:28.350514"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T02:40:34.414665"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T17:31:40.168449"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-08T08:05:50.999570"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T19:24:28.687663"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T22:15:01.879486"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T00:55:27.377960"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-004-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T12:40:02.676730"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-004> .
+
+<https://w3id.org/shift/kg/event/act/HP-005-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T10:21:22.843538"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-005> .
+
+<https://w3id.org/shift/kg/event/act/HP-005-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T13:14:22.432258"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-005> .
+
+<https://w3id.org/shift/kg/event/act/HP-005-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T12:15:06.436345"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-005> .
+
+<https://w3id.org/shift/kg/event/act/HP-005-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T19:12:49.238238"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-005> .
+
+<https://w3id.org/shift/kg/event/act/HP-005-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T20:48:18.316569"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-005> .
+
+<https://w3id.org/shift/kg/event/act/HP-005-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T11:26:05.334028"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-005> .
+
+<https://w3id.org/shift/kg/event/act/HP-006-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T09:12:51.745585"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-006> .
+
+<https://w3id.org/shift/kg/event/act/HP-006-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T03:03:13.051307"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-006> .
+
+<https://w3id.org/shift/kg/event/act/HP-006-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T15:07:02.951740"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-006> .
+
+<https://w3id.org/shift/kg/event/act/HP-006-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T11:47:45.722730"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-006> .
+
+<https://w3id.org/shift/kg/event/act/HP-006-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T23:58:12.244566"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-006> .
+
+<https://w3id.org/shift/kg/event/act/HP-006-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T23:26:54.663421"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-006> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T17:55:03.858276"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T21:47:02.184130"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T00:33:44.499092"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T14:35:37.036081"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T04:54:05.351948"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T11:38:17.435946"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T23:49:20.919238"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T07:27:36.541029"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T06:23:46.035836"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T03:04:45.741738"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T02:46:32.781300"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-007-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T14:35:26.369592"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-007> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T21:57:11.704947"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-14T19:08:56.805414"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T15:48:30.896736"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T22:35:22.279206"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T19:05:13.987977"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T10:13:46.371909"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T17:58:08.225593"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T02:03:41.176304"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T17:42:29.693824"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-01T09:56:38.979859"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T14:55:09.283607"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-015-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T15:39:33.169956"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-015> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T18:43:28.555704"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T09:00:44.945742"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T22:19:40.897097"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T11:13:09.787373"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T19:44:21.203641"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T11:49:21.129751"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-05T16:24:01.980698"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T00:33:16.338113"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T16:20:17.678012"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-24T09:15:15.406541"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T21:58:04.802033"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-017-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T10:47:04.112943"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-017> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T17:12:30.203660"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T14:31:17.638392"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T04:10:10.605360"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-07T21:12:48.790903"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T23:23:59.625540"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T10:37:41.995862"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T14:14:08.921238"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-019-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T09:04:17.836731"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-019> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T04:38:40.093374"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T20:02:09.108905"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T18:02:43.223164"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T07:11:31.579137"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T14:11:28.746365"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T14:03:07.993020"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-25T10:17:51.476722"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T20:53:03.374340"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T11:43:31.171003"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T07:12:31.909783"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T00:36:14.056965"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-020-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T10:46:33.529548"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-020> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T07:31:21.627553"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-13T00:45:33.408491"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T02:11:07.829156"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-11T10:10:29.738011"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T07:47:08.846508"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T17:50:35.631812"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T23:38:16.718693"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-021-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-09T23:16:56.594644"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-021> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T03:38:28.338306"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-21T20:26:14.062082"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-10> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T03:53:57.572061"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-11> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T21:49:48.541623"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-02T10:14:03.827888"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T22:52:52.713421"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T11:15:54.323004"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-15T17:01:53.638708"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-6> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-06T04:27:32.884211"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-7> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-28T14:45:31.658674"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-8> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T22:01:12.806123"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-022-9> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-26T23:06:45.482307"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-022> .
+
+<https://w3id.org/shift/kg/event/act/HP-023-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T22:25:17.469159"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-023-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-17T20:56:00.824154"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-023-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-20T16:07:06.269527"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-023-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-19T03:19:41.116676"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-023-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-18T07:52:58.936789"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-023-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-23T23:20:59.324233"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-023> .
+
+<https://w3id.org/shift/kg/event/act/HP-025-0> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-27T20:26:41.091073"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-025> .
+
+<https://w3id.org/shift/kg/event/act/HP-025-1> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-03T09:03:57.232783"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-025> .
+
+<https://w3id.org/shift/kg/event/act/HP-025-2> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-12T11:01:06.524447"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-025> .
+
+<https://w3id.org/shift/kg/event/act/HP-025-3> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-22T22:47:38.111129"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-025> .
+
+<https://w3id.org/shift/kg/event/act/HP-025-4> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-03-04T09:25:34.138244"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-025> .
+
+<https://w3id.org/shift/kg/event/act/HP-025-5> a saref:CommandExecution ;
+    saref:hasTimestamp "2026-02-10T13:30:20.835298"^^xsd:dateTime ;
+    saref:madeBy <https://w3id.org/shift/kg/asset/HP-025> .
+
+<https://w3id.org/shift/kg/command/CURT-1> a saref:Command ;
+    rdfs:label "SetPointReduce"@en ;
+    saref:isCommandOf <https://w3id.org/shift/kg/function/Curtailment> .
+
+<https://w3id.org/shift/kg/command/CURT-2> a saref:Command ;
+    rdfs:label "ConfirmReduction"@en ;
+    saref:isCommandOf <https://w3id.org/shift/kg/function/Curtailment> .
+
+<https://w3id.org/shift/kg/command/CURT-3> a saref:Command ;
+    rdfs:label "ReleaseSetPoint"@en ;
+    saref:isCommandOf <https://w3id.org/shift/kg/function/Curtailment> .
+
+<https://w3id.org/shift/kg/obs/METER-000-1> a saref:PropertyValue ;
+    saref:hasTimestamp "2026-03-05T11:30:00"^^xsd:dateTime ;
+    saref:hasValue "2.4"^^xsd:float ;
+    saref:isValueOfProperty <https://w3id.org/shift/kg/property/ActivePower> .
+
+<https://w3id.org/shift/kg/obs/METER-000-2> a saref:PropertyValue ;
+    saref:hasTimestamp "2026-03-05T12:00:00"^^xsd:dateTime ;
+    saref:hasValue "3.1"^^xsd:float ;
+    saref:isValueOfProperty <https://w3id.org/shift/kg/property/ActivePower> .
+
+<https://w3id.org/shift/kg/obs/METER-000-3> a saref:PropertyValue ;
+    saref:hasTimestamp "2026-03-05T12:30:00"^^xsd:dateTime ;
+    saref:hasValue "2.8"^^xsd:float ;
+    saref:isValueOfProperty <https://w3id.org/shift/kg/property/ActivePower> .
+
+<https://w3id.org/shift/kg/function/Curtailment> a saref:Function ;
+    saref:hasCommand <https://w3id.org/shift/kg/command/CURT-1>,
+        <https://w3id.org/shift/kg/command/CURT-2>,
+        <https://w3id.org/shift/kg/command/CURT-3> .
+
+<https://w3id.org/shift/kg/property/ActivePower> a saref:Property .
+
+<https://w3id.org/shift/kg/asset/BAT-019> a saref:Device ;
+    saref:hasIdentifier "BAT-019"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-001> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-001"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-004> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-004"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-017> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-017"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/EV-020> a saref:Device ;
+    saref:hasIdentifier "EV-020"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-005> a saref:Device ;
+    saref:hasIdentifier "HP-005"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-006> a saref:Device ;
+    saref:hasIdentifier "HP-006"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-023> a saref:Device ;
+    saref:hasIdentifier "HP-023"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-025> a saref:Device ;
+    saref:hasIdentifier "HP-025"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/BAT-002> a saref:Device ;
+    saref:hasIdentifier "BAT-002"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-013> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-013"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-019> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-019"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-021> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-021"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/EV-003> a saref:Device ;
+    saref:hasIdentifier "EV-003"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/EV-023> a saref:Device ;
+    saref:hasIdentifier "EV-023"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-019> a saref:Device ;
+    saref:hasIdentifier "HP-019"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-021> a saref:Device ;
+    saref:hasIdentifier "HP-021"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/BAT-007> a saref:Device ;
+    saref:hasIdentifier "BAT-007"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/BAT-014> a saref:Device ;
+    saref:hasIdentifier "BAT-014"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/BAT-021> a saref:Device ;
+    saref:hasIdentifier "BAT-021"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-008> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-008"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-010> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-010"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-011> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-011"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/CTRL-023> a saref:Actuator ;
+    saref:hasIdentifier "CTRL-023"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/EV-011> a saref:Device ;
+    saref:hasIdentifier "EV-011"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/EV-015> a saref:Device ;
+    saref:hasIdentifier "EV-015"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-004> a saref:Device ;
+    saref:hasIdentifier "HP-004"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-007> a saref:Device ;
+    saref:hasIdentifier "HP-007"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-015> a saref:Device ;
+    saref:hasIdentifier "HP-015"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-017> a saref:Device ;
+    saref:hasIdentifier "HP-017"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-020> a saref:Device ;
+    saref:hasIdentifier "HP-020"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/asset/HP-022> a saref:Device ;
+    saref:hasIdentifier "HP-022"^^xsd:string ;
+    saref:hasState <https://w3id.org/shift/kg/state/Online> .
+
+<https://w3id.org/shift/kg/state/Online> a saref:State .
+

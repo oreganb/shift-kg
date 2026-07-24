@@ -1,0 +1,20 @@
+# SHIFT-RR-28 : Label asset as LowReliability
+# Expressible in SWRL: NO — two aggregates plus a ratio between them.
+# TYPING NOTE: the ABox types every string as xsd:string. Under RDF 1.1 a
+# simple literal IS xsd:string, but triple-pattern matching and the IN
+# operator use term equality, so an untyped "Pending" in a rule body
+# silently matches NOTHING rather than raising. Datatypes are explicit here.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT { ?a shift:reliabilityStatus "LowReliability" }
+WHERE {
+  SELECT ?a (COUNT(DISTINCT ?e) AS ?total)
+            (SUM(IF(?st = "Failed"^^xsd:string, 1, 0)) AS ?fails) WHERE {
+    ?a a shift:Asset ;
+       shift:hasActivationEvent ?e .
+    ?e shift:eventStatus ?st ;
+       shift:eventTimestamp ?ts .
+    FILTER(?ts > ?CUTOFF30)
+  } GROUP BY ?a
+    HAVING (COUNT(DISTINCT ?e) >= 5 && (SUM(IF(?st = "Failed"^^xsd:string, 1, 0)) / COUNT(DISTINCT ?e)) > 0.2)
+}

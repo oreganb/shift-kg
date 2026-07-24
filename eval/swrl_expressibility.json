@@ -1,0 +1,177 @@
+[
+ {
+  "rule": "SHIFT-RR-00",
+  "swrl": "NO",
+  "reason": "negation as failure"
+ },
+ {
+  "rule": "SHIFT-RR-01",
+  "swrl": "PARTIAL",
+  "reason": "inequality / UNA"
+ },
+ {
+  "rule": "SHIFT-RR-02",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-03",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-04",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-05",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-06",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-07",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-08",
+  "swrl": "NO",
+  "reason": "negation as failure"
+ },
+ {
+  "rule": "SHIFT-RR-09",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-10",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-11",
+  "swrl": "PARTIAL",
+  "reason": "inequality / UNA"
+ },
+ {
+  "rule": "SHIFT-RR-12",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-13",
+  "swrl": "PARTIAL",
+  "reason": "inequality / UNA"
+ },
+ {
+  "rule": "SHIFT-RR-14",
+  "swrl": "NO",
+  "reason": "aggregation (COUNT/SUM/AVG); temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-15",
+  "swrl": "NO",
+  "reason": "aggregation (COUNT/SUM/AVG)"
+ },
+ {
+  "rule": "SHIFT-RR-16",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-17",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-18",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-19",
+  "swrl": "NO",
+  "reason": "aggregation (COUNT/SUM/AVG)"
+ },
+ {
+  "rule": "SHIFT-RR-20",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-21",
+  "swrl": "NO",
+  "reason": "aggregation (COUNT/SUM/AVG)"
+ },
+ {
+  "rule": "SHIFT-RR-22",
+  "swrl": "NO",
+  "reason": "negation as failure"
+ },
+ {
+  "rule": "SHIFT-RR-23",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-24",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-25",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-26",
+  "swrl": "PARTIAL",
+  "reason": "temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-27",
+  "swrl": "NO",
+  "reason": "negation as failure; inequality / UNA"
+ },
+ {
+  "rule": "SHIFT-RR-28",
+  "swrl": "NO",
+  "reason": "aggregation (COUNT/SUM/AVG); ratio between aggregates; temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-29",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-30",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-31",
+  "swrl": "NO",
+  "reason": "aggregation (COUNT/SUM/AVG); temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-32",
+  "swrl": "NO",
+  "reason": "ratio between aggregates; temporal now()"
+ },
+ {
+  "rule": "SHIFT-RR-33",
+  "swrl": "YES",
+  "reason": "\u2014"
+ },
+ {
+  "rule": "SHIFT-RR-34",
+  "swrl": "NO",
+  "reason": "individual creation; built-in function (geo/interval)"
+ }
+]

@@ -1,0 +1,17 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+
+# External ontologies are fetched, not redistributed. See external/PROVENANCE.md
+# and scripts/fetch_external.py.
+external/*.ttl
+external/seas-modules/
+external/_unparseable/
+
+# Fuseki distribution and runtime state; scripts/run_fuseki.py downloads it.
+fuseki/
+
+# Default scratch output of eval/run_rules.py; the curated per-scale reports are
+# eval/report_*.json and are tracked.
+eval/rule_report.json

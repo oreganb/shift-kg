@@ -1,0 +1,13 @@
+# CQ-01 in SEAS -- ANSWERABLE.
+# seas:Actor/ElectricityPlayer plus seas:owns plus the electric-power system
+# taxonomy (ElectricPowerConsumer / ElectricPowerProducer /
+# ElectricPowerStorageSystem) express this directly.
+PREFIX seas: <https://w3id.org/seas/>
+SELECT DISTINCT ?actor WHERE {
+  ?actor a seas:ElectricityPlayer ;
+         seas:owns ?consuming ;
+         seas:owns ?flex .
+  ?consuming a seas:ElectricPowerConsumer .
+  { ?flex a seas:ElectricPowerProducer } UNION { ?flex a seas:ElectricPowerStorageSystem }
+}
+ORDER BY ?actor

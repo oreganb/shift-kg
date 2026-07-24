@@ -1,0 +1,20 @@
+# CQ-06  Which controllable assets at node N can respond within T milliseconds?
+# Group B (assets and flexibility).
+#
+# Parameters (method note 5): the node and the response-time ceiling. T is a
+# dispatch requirement, not part of the question.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?asset ?responseTime_ms
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?NODE            { <https://w3id.org/shift/kg/node/Inishmore> }
+  VALUES ?MAX_RESPONSE_MS { 1000 }            # sub-second dispatch requirement
+  # ----------------------------------------------------------------------
+  ?asset a shift:Asset ;
+         shift:locatedAt ?NODE ;
+         shift:isControllable true ;
+         shift:responseTime_ms ?responseTime_ms .
+  FILTER(?responseTime_ms <= ?MAX_RESPONSE_MS)
+}
+ORDER BY ?asset

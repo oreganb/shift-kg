@@ -1,0 +1,48 @@
+# CQ-25  Which actors' share of trade opportunities deviates most from their
+#        community's mean?
+# Group G (added in self-review v0.2). Basis: SHIFT-RR-19 / FAIRNESS.
+#
+# Parameters (method note 5): the deviation ratio above which an actor is
+# reported. Fairness tolerance is policy, not question content.
+#
+# "Trade opportunities" = trades the actor is party to, as buyer or seller.
+# The community mean is taken over the actors of that CMC that appear in at
+# least one trade; actors with no trades at all contribute no row and are not
+# counted in the mean. The oracle applies the same convention.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?actor ?cmc ?trades ?communityMean ?deviationRatio
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?MIN_DEVIATION_RATIO { 0.2 }         # FAIRNESS default (20%)
+  # ----------------------------------------------------------------------
+  {
+    SELECT ?actor ?cmc (COUNT(DISTINCT ?trade) AS ?trades)
+    WHERE {
+      ?actor shift:belongsToCMC ?cmc .
+      ?trade a shift:FlexibilityTrade .
+      { ?trade shift:buyerActor ?actor } UNION { ?trade shift:sellerActor ?actor }
+    }
+    GROUP BY ?actor ?cmc
+  }
+  {
+    SELECT ?cmc (AVG(?peerTrades) AS ?communityMean)
+    WHERE {
+      {
+        SELECT ?peer ?cmc (COUNT(DISTINCT ?peerTrade) AS ?peerTrades)
+        WHERE {
+          ?peer shift:belongsToCMC ?cmc .
+          ?peerTrade a shift:FlexibilityTrade .
+          { ?peerTrade shift:buyerActor ?peer }
+          UNION
+          { ?peerTrade shift:sellerActor ?peer }
+        }
+        GROUP BY ?peer ?cmc
+      }
+    }
+    GROUP BY ?cmc
+  }
+  BIND(ABS(?trades - ?communityMean) / ?communityMean AS ?deviationRatio)
+  FILTER(?deviationRatio >= ?MIN_DEVIATION_RATIO)
+}
+ORDER BY DESC(?deviationRatio) ?actor

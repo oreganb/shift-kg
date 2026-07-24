@@ -1,0 +1,1146 @@
+[
+ {
+  "cq": "CQ-01",
+  "group": "A",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq01.rq",
+   "rows": 22,
+   "gold": 22,
+   "matched": true,
+   "runtime_ms": 246.72,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class. SAREF Core has no Actor, Person or Organisation, and no ownership property.",
+   "query": "",
+   "rows": null,
+   "gold": 22,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No ownership property either.",
+   "query": "",
+   "rows": null,
+   "gold": 22,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/seas/cq01.rq",
+   "rows": 22,
+   "gold": 22,
+   "matched": true,
+   "runtime_ms": 26.89,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-02",
+  "group": "A",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq02.rq",
+   "rows": 26,
+   "gold": 26,
+   "matched": true,
+   "runtime_ms": 111.29,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class and no market-transaction class.",
+   "query": "",
+   "rows": null,
+   "gold": 26,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No market-transaction class.",
+   "query": "",
+   "rows": null,
+   "gold": 26,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Selling/Trading/Transaction exist as classes but carry no properties: nothing links a transaction to its seller, its volume, its time or a confirmation status.",
+   "query": "",
+   "rows": null,
+   "gold": 26,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-03",
+  "group": "A",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq03.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 7.42,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class, no role model, no region or location term in Core.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No region term.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Role/hasRole and seas:Operator/Aggregator/EndUser give the market role, but no property associates an Actor with a region or zone (seas:location is a PropertyKey on FeatureOfInterest; seas:Actor is an AbstractEntity).",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-04",
+  "group": "A",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq04.rq",
+   "rows": 8,
+   "gold": 8,
+   "matched": true,
+   "runtime_ms": 14.09,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class, no group or community class, no trust relation.",
+   "query": "",
+   "rows": null,
+   "gold": 8,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No community class and no trust relation.",
+   "query": "",
+   "rows": null,
+   "gold": 8,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No community or group class and no membership property for actors; seas:GroupManager exists but the group it manages does not. No trust relation.",
+   "query": "",
+   "rows": null,
+   "gold": 8,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-05",
+  "group": "A",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq05.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 21.46,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent or aggregator class.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No aggregator class.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Aggregator exists, but SEAS declares no compliance, trust or prequalification properties, so participation requirements cannot be tested.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-06",
+  "group": "B",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq06.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 13.04,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "PARTIAL",
+   "blocker": "Controllability is expressible (saref:Actuator/Function/Command). Missing: a siting term for node N (saref4bldg:BuildingSpace is an extension) and any response-time property (s4ener territory).",
+   "query": "cq/saref/cq06.rq",
+   "rows": 3,
+   "gold": 1,
+   "matched": false,
+   "runtime_ms": 7.33,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener:hasActivationDelay (xsd:duration, no declared domain) supplies the response-time constraint Core lacked. Still missing: a grid-node term -- s4bldg adds Building and BuildingSpace, which are spatial containers, not network nodes.",
+   "query": "cq/saref-ext/cq06.rq",
+   "rows": 12,
+   "gold": 1,
+   "matched": false,
+   "runtime_ms": 6.85,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "Siting is expressible via seas:ConnectionPoint/Zone. Missing: any response-time property, and a device-level controllability flag (seas:ControlActivity describes the act, not the capability).",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-07",
+  "group": "B",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq07.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 10.18,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class or ownership property, and no storage-capability term in Core.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener:Storage and the RoleType individual EnergyStorage supply the storage capability Core lacked; availability comes from saref:hasState. Still missing: Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor.",
+   "query": "cq/saref-ext/cq07.rq",
+   "rows": 11,
+   "gold": 1,
+   "matched": false,
+   "runtime_ms": 6.23,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:owns plus seas:Battery/EnergyStorage give the storage-capable assets of an actor. Missing: availability -- the seas operating codelist carries ratings (op-Nominal, op-Min, op-Maximum-*), not an available/unavailable state.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-08",
+  "group": "B",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq08.rq",
+   "rows": 12,
+   "gold": 12,
+   "matched": true,
+   "runtime_ms": 104.25,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "PARTIAL",
+   "blocker": "saref:CommandExecution with saref:hasTimestamp supplies the denominator. Missing: any outcome or status property on an execution, so failures cannot be counted.",
+   "query": "cq/saref/cq08.rq",
+   "rows": 32,
+   "gold": 12,
+   "matched": false,
+   "runtime_ms": 24.77,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/saref-ext/cq08.rq",
+   "rows": 12,
+   "gold": 12,
+   "matched": true,
+   "runtime_ms": 99.24,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Failure and seas:failure can mark a failed feature of interest. Missing: an activation-attempt event class, so the denominator of a failure ratio has no term.",
+   "query": "",
+   "rows": null,
+   "gold": 12,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-09",
+  "group": "B",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq09.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 9.03,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No building class in SAREF Core (saref4bldg:Building is an extension) and no heat-pump or battery device kinds in Core (s4ener/s4bldg).",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4bldg:Building, s4bldg:contains and s4bldg:ElectricFlowStorageDevice make the building and the battery exact. Still missing: a heat-pump class -- NEITHER extension declares one (zero occurrences in both files); the nearest, s4bldg:EnergyConversionDevice, is far broader and also subsumes s4bldg:SolarDevice.",
+   "query": "cq/saref-ext/cq09.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 12.11,
+   "constraint_not_enforced": "Rows match, but s4bldg:EnergyConversionDevice is broader than a heat pump and also subsumes s4bldg:SolarDevice."
+  },
+  "seas": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/seas/cq09.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 10.19,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-10",
+  "group": "C",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq10.rq",
+   "rows": 6,
+   "gold": 6,
+   "matched": true,
+   "runtime_ms": 38.36,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "saref:Service exists but there is no siting term and no committed-capacity property.",
+   "query": "",
+   "rows": null,
+   "gold": 6,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener:PowerLimit, PowerEnvelope and FlexOffer express a committed capacity, which Core could not. Still missing: a grid-node siting term and a service-activity status.",
+   "query": "",
+   "rows": null,
+   "gold": 6,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "Committed capacity is expressible as a seas:Evaluation interpreted through the flexibility codelist. Missing: a service activity status and any service-to-node siting property.",
+   "query": "",
+   "rows": null,
+   "gold": 6,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-11",
+  "group": "C",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq11.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": true,
+   "runtime_ms": 72.92,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No model of a commitment against which delivery is measured.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener power profiles express a commitment and Core observations express the measured value. Still missing: a delivery-event class binding a commitment to its measured outcome so the pair can be compared per event.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "Committed and measured values are both expressible as evaluations. Missing: a delivery-event class binding the pair so the two can be compared per event.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-12",
+  "group": "C",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq12.rq",
+   "rows": 6,
+   "gold": 6,
+   "matched": true,
+   "runtime_ms": 10.52,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No contract class.",
+   "query": "",
+   "rows": null,
+   "gold": 6,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "s4ener:ContractualPowerLimit is a power limit, not a contract. No contract class, no end date, no governed-service relation.",
+   "query": "",
+   "rows": null,
+   "gold": 6,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Contract exists and seas:player links it to an actor. Missing: a contract end-date property and any contract-governs-service relation.",
+   "query": "",
+   "rows": null,
+   "gold": 6,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-13",
+  "group": "C",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq13.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 5.67,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No contract class, no trade class, no penalty term.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No contract class and no trade class, so no path from a trade to a penalty rate. s4ener has no penalty term.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Contract exists. Missing: a trade-to-contract association and any penalty-rate property.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-14",
+  "group": "D",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq14.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 41.64,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class, no community, no trust relation.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No trade class, no community, no trust relation.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class carrying its parties, no community class, no trust relation.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-15",
+  "group": "D",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq15.rq",
+   "rows": 178,
+   "gold": 178,
+   "matched": true,
+   "runtime_ms": 124.8,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class, no community, no consent term.",
+   "query": "",
+   "rows": null,
+   "gold": 178,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No trade class, no community, no consent term.",
+   "query": "",
+   "rows": null,
+   "gold": 178,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class carrying its parties, no community class, no consent term.",
+   "query": "",
+   "rows": null,
+   "gold": 178,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-16",
+  "group": "D",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq16.rq",
+   "rows": 197,
+   "gold": 197,
+   "matched": true,
+   "runtime_ms": 69.44,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class and no delivery window.",
+   "query": "",
+   "rows": null,
+   "gold": 197,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "s4ener:FlexOffer/FlexRequest describe offers, not concluded trades with a status and a delivery window.",
+   "query": "",
+   "rows": null,
+   "gold": 197,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "seas:Transaction has no status property and there is no delivery-window term.",
+   "query": "",
+   "rows": null,
+   "gold": 197,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-17",
+  "group": "D",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq17.rq",
+   "rows": 30,
+   "gold": 30,
+   "matched": true,
+   "runtime_ms": 98.94,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class and no market clearing window.",
+   "query": "",
+   "rows": null,
+   "gold": 30,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener:FlexOffer/FlexRequest with hasEnergy and Slot timing express traded energy per slot. Still missing: a market-clearing-window class and any trade-to-window link.",
+   "query": "",
+   "rows": null,
+   "gold": 30,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Transaction, seas:Clearing and seas:Market give the market frame. Missing: a traded-volume property and any window-to-transaction link.",
+   "query": "",
+   "rows": null,
+   "gold": 30,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-18",
+  "group": "E",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq18.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": true,
+   "runtime_ms": 12.09,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class; saref:Profile carries a price via profileHasPrice but no tariff structure.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. s4ener:Incentive and IncentiveTableTier give tariff structure, but with no actor there is no consumption to threshold.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:Price/PricePerEnergy/BasePrice and seas:Profile express a tariff price. Missing: flat-versus-dynamic structural flags, and an actor-level consumption property (nominalEnergyConsumption is on systems).",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-19",
+  "group": "E",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq19.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 4.9,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No tariff-structure flags, so there is nothing that can contradict.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener:IncentiveTableProfile, IncentiveTableTier and IncentiveType give real tariff structure, which Core lacked entirely. Still missing: flat-versus-dynamic flags, so there is still nothing that can contradict.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No tariff-structure flags, so there is nothing that can contradict.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-20",
+  "group": "E",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq20.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": true,
+   "runtime_ms": 12.97,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No forecast class, no node, no DER-capacity property.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "PARTIAL",
+   "blocker": "s4ener:hasDemandRateForecast and hasUsageForecast supply the forecast Core lacked. Still missing: a grid-node term and any DER-capacity property.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:NetworkNode/ElectricPowerSystem give the node and SEAS has forecasting classes. Missing: forecasting is weather-specific (WeatherForecast, WeatherForecasting) with no load-forecast value bound to a node, and no DER-capacity property.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-21",
+  "group": "F",
+  "shift": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "See cq/shift/cq21.rq -- blocking term named in the query header.",
+   "query": "cq/shift/cq21.rq",
+   "rows": 0,
+   "gold": 1,
+   "matched": false,
+   "runtime_ms": 8.14,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No electrical connectivity model; saref:consistsOf is mereological composition, not connection.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "s4bldg:contains is spatial containment, not electrical connection. Neither extension adds a connectivity or conducting-equipment model.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/seas/cq21.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 8.83,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-22",
+  "group": "F",
+  "shift": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "See cq/shift/cq22.rq -- blocking term named in the query header.",
+   "query": "cq/shift/cq22.rq",
+   "rows": 0,
+   "gold": 3,
+   "matched": false,
+   "runtime_ms": 10.23,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "PARTIAL",
+   "blocker": "saref:Function/Command/hasCommand return the commands. Missing: any ordering, step or successor property, so the sequence the question asks for cannot be expressed.",
+   "query": "cq/saref/cq22.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": false,
+   "runtime_ms": 6.04,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/saref-ext/cq22.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": true,
+   "runtime_ms": 6.09,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "seas:ControlActivity/ActuatingActivity/OnOffActivity express the control act. Missing: a Command class for the individual instruction and any ordering property.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-23",
+  "group": "F",
+  "shift": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "See cq/shift/cq23.rq -- blocking term named in the query header.",
+   "query": "cq/shift/cq23.rq",
+   "rows": 0,
+   "gold": 1,
+   "matched": false,
+   "runtime_ms": 9.92,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/saref/cq23.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 10.98,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/saref-ext/cq23.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 12.69,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/seas/cq23.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 12.54,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-24",
+  "group": "F",
+  "shift": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "See cq/shift/cq24.rq -- blocking term named in the query header.",
+   "query": "cq/shift/cq24.rq",
+   "rows": 0,
+   "gold": 3,
+   "matched": false,
+   "runtime_ms": 7.71,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class and no activity taxonomy.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No activity taxonomy in either extension.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "PARTIAL",
+   "blocker": "SEAS is the only one of the three with the activity taxonomy (seas:Activity, ForecastingActivity, PlanningActivity, OptimizationActivity). Missing: any agency property -- no property has domain seas:Actor or range seas:Activity, so the link can only be the untyped transitive seas:contains -- and no way to say 'currently', since seas:temporalContext has domain TimeContextualizedEvaluation.",
+   "query": "cq/seas/cq24.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": true,
+   "runtime_ms": 5.85,
+   "constraint_not_enforced": "Rows match, but seas:contains asserts containment, not performance, and 'currently' is unenforceable."
+  }
+ },
+ {
+  "cq": "CQ-25",
+  "group": "G",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq25.rq",
+   "rows": 3,
+   "gold": 3,
+   "matched": true,
+   "runtime_ms": 1400.46,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No agent class, no community, no trade class.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "Neither extension adds an agent class. s4ener:Role is a DEVICE role codelist (EnergyConsumer / EnergyProducer / EnergyStorage) and s4ener:hasRole has domain saref:Device, so it cannot carry an actor. No community class and no trade class.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class carrying its parties, and no community class to average over.",
+   "query": "",
+   "rows": null,
+   "gold": 3,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ },
+ {
+  "cq": "CQ-26",
+  "group": "G",
+  "shift": {
+   "verdict": "ANSWERABLE",
+   "blocker": "",
+   "query": "cq/shift/cq26.rq",
+   "rows": 1,
+   "gold": 1,
+   "matched": true,
+   "runtime_ms": 18.9,
+   "constraint_not_enforced": ""
+  },
+  "saref": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class and no replacement relation.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "saref_ext": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class and no replacement or backup relation.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  },
+  "seas": {
+   "verdict": "NOT-EXPRESSIBLE",
+   "blocker": "No trade class and no backup or replacement relation.",
+   "query": "",
+   "rows": null,
+   "gold": 1,
+   "matched": null,
+   "runtime_ms": null,
+   "constraint_not_enforced": ""
+  }
+ }
+]

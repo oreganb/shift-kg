@@ -1,0 +1,19 @@
+# CQ-23 in SEAS -- ANSWERABLE.
+# seas:Evaluation with seas:evaluatedValue and seas:temporalContext pointing at
+# a time:Instant reifies a value with its time, so the history is queryable.
+PREFIX seas: <https://w3id.org/seas/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?device ?property ?value ?time WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?DEVICE  { <https://w3id.org/shift/kg/asset/METER-000> }
+  VALUES ?AT_TIME { "2026-03-05T12:00:00"^^xsd:dateTime }
+  # ----------------------------------------------------------------------
+  BIND(?DEVICE AS ?device)
+  ?DEVICE seas:hasProperty ?property .
+  ?property seas:evaluation ?evaluation .
+  ?evaluation seas:evaluatedValue ?value ;
+              seas:temporalContext ?instant .
+  ?instant time:inXSDDateTime ?time .
+  FILTER(?time = ?AT_TIME)
+}

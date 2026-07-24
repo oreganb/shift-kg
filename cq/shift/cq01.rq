@@ -1,0 +1,22 @@
+# CQ-01  Which actors both consume and produce or store electricity?
+# Group A (actors and roles). Basis: SHIFT-RR-00 (Flexumer inference).
+#
+# Parameters (method note 5): the asset-function vocabulary is the parameter
+# here; RR-00 defines a flexumer as owning a consumption asset together with a
+# generation or storage asset.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?actor
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?CONSUMPTION_FUNCTION { "consumption"^^xsd:string }   # RR-00 default
+  VALUES ?PRODUCE_OR_STORE     { "generation"^^xsd:string      # RR-00 default
+                                 "storage"^^xsd:string }
+  # ----------------------------------------------------------------------
+  ?actor a shift:Actor ;
+         shift:ownsAsset ?consumingAsset ;
+         shift:ownsAsset ?flexAsset .
+  ?consumingAsset shift:assetFunction ?CONSUMPTION_FUNCTION .
+  ?flexAsset      shift:assetFunction ?PRODUCE_OR_STORE .
+}
+ORDER BY ?actor

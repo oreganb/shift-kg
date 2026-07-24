@@ -1,0 +1,13 @@
+# SHIFT-RR-29 : Reward flexumer for net grid export
+# Expressible in SWRL: YES
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT {
+  ?a shift:eligibleForBonus true ;
+     shift:rewardEligibilityStatus "NetExporter" .
+}
+WHERE {
+  ?a a shift:Actor ;
+     shift:monthlyExport_kWh ?ex ;
+     shift:monthlyImport_kWh ?im .
+  FILTER(?ex > ?im)
+}

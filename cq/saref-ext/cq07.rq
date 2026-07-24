@@ -1,0 +1,13 @@
+# CQ-07 in SAREF Core + 4ENER + 4BLDG -- PARTIAL.
+# The extensions supply the storage capability Core lacked (s4ener:Storage, and
+# the s4ener RoleType individual EnergyStorage), and availability comes from
+# Core's saref:hasState. What is still missing is the ACTOR: neither extension
+# adds an agent class, and s4ener:hasRole has domain saref:Device, so "of actor
+# X" cannot be applied. This returns every available storage device.
+PREFIX saref:  <https://saref.etsi.org/core/>
+PREFIX s4ener: <https://saref.etsi.org/saref4ener/>
+SELECT ?asset WHERE {
+  ?asset a s4ener:Storage ;
+         saref:hasState <https://w3id.org/shift/kg/state/Online> .
+}
+ORDER BY ?asset

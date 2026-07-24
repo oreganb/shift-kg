@@ -1,0 +1,19 @@
+# CQ-09 in SAREF Core + 4ENER + 4BLDG -- PARTIAL.
+# s4bldg:Building and s4bldg:contains give the building, and
+# s4bldg:ElectricFlowStorageDevice gives the battery, so the "no battery" half
+# is exact. The "hosts a heat pump" half is NOT: neither extension declares a
+# heat-pump class (zero occurrences of the string in both files). The nearest
+# is s4bldg:EnergyConversionDevice, which is far broader -- it also subsumes
+# s4bldg:SolarDevice, so a building with only a PV panel would match too.
+# The rows happen to be right on this graph; the constraint is not.
+PREFIX s4bldg: <https://saref.etsi.org/saref4bldg/>
+SELECT ?building WHERE {
+  ?building a s4bldg:Building ;
+            s4bldg:contains ?device .
+  ?device a s4bldg:EnergyConversionDevice .
+  FILTER NOT EXISTS {
+    ?building s4bldg:contains ?storage .
+    ?storage a s4bldg:ElectricFlowStorageDevice .
+  }
+}
+ORDER BY ?building

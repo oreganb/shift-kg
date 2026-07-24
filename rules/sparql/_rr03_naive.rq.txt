@@ -1,0 +1,12 @@
+# SHIFT-RR-03 : Infer dynamic tariff eligibility
+# Expressible in SWRL: YES
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT { ?a shift:eligibleForDynamicTariff true }
+WHERE {
+  ?a a shift:Actor ;
+     shift:ownsAsset ?m , ?c .
+  ?m a shift:SmartMeterAsset ; shift:isRemoteReadable true .
+  ?c a shift:ControlAsset .
+  ?p shift:integratesActor ?a ;
+     shift:supportsRealTimePricing true .
+}

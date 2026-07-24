@@ -1,0 +1,23 @@
+# CQ-18  Which actors on a flat tariff exceed the consumption threshold for a
+#        dynamic plan?
+# Group E (tariffs, pricing, forecasts). Basis: SHIFT-RR-20.
+#
+# Parameters (method note 5): the monthly consumption threshold above which a
+# dynamic plan is recommended. Plans that assert BOTH flat and dynamic pricing
+# are excluded here -- they are contradictory, and CQ-19 is the query that
+# surfaces them.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?actor ?avgMonthlyConsumption_kWh ?tariff
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?CONSUMPTION_THRESHOLD_kWh { 500 }   # RR-20 default
+  # ----------------------------------------------------------------------
+  ?actor a shift:Actor ;
+         shift:hasTariffPlan ?tariff ;
+         shift:avgMonthlyConsumption_kWh ?avgMonthlyConsumption_kWh .
+  ?tariff shift:hasFlatRate true ;
+          shift:isDynamic false .
+  FILTER(?avgMonthlyConsumption_kWh > ?CONSUMPTION_THRESHOLD_kWh)
+}
+ORDER BY ?actor

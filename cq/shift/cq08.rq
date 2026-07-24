@@ -1,0 +1,37 @@
+# CQ-08  Which assets show an unacceptable activation failure rate over recent
+#        activations?
+# Group B (assets and flexibility). Basis: SHIFT-RR-28 (LowReliability).
+#
+# Parameters (method note 5): the minimum activation count, the failure-ratio
+# ceiling and the lookback window all come from RR-28. "Unacceptable" and
+# "recent" are the operator's words; the numbers live here.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?asset ?activations ?failures ?failureRatio
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?MIN_ACTIVATIONS   { 5 }             # RR-28 default
+  VALUES ?MAX_FAILURE_RATIO { 0.2 }           # RR-28 default
+  # ----------------------------------------------------------------------
+  {
+    SELECT ?asset (COUNT(DISTINCT ?event) AS ?activations)
+                  (SUM(IF(?status = "Failed"^^xsd:string, 1, 0)) AS ?failures)
+    WHERE {
+      # -- parameters ----------------------------------------------------
+      VALUES ?NOW         { "2026-03-09T00:00:00"^^xsd:dateTime } # graph clock
+      VALUES ?WINDOW_DAYS { 30 }               # RR-28 default
+      # ------------------------------------------------------------------
+      BIND(?NOW - STRDT(CONCAT("P", STR(?WINDOW_DAYS), "D"),
+                        xsd:dayTimeDuration) AS ?windowStart)
+      ?asset a shift:Asset ;
+             shift:hasActivationEvent ?event .
+      ?event shift:eventStatus ?status ;
+             shift:eventTimestamp ?eventTime .
+      FILTER(?eventTime > ?windowStart)
+    }
+    GROUP BY ?asset
+  }
+  BIND(?failures / ?activations AS ?failureRatio)
+  FILTER(?activations >= ?MIN_ACTIVATIONS && ?failureRatio > ?MAX_FAILURE_RATIO)
+}
+ORDER BY ?asset

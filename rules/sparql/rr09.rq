@@ -1,0 +1,13 @@
+# SHIFT-RR-09 : Mark service completed after contract end
+# Expressible in SWRL: PARTIALLY — needs now().
+# NOTE: this rule and RR-04 both ASSERT a new value for a functional-style status
+# property whose old value still holds. In OWL this yields two simultaneous
+# values, not a replacement. Monotonicity problem documented in docs/RULES.md.
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT { ?s shift:serviceStatus "Completed" }
+WHERE {
+  ?s a shift:FlexibilityService ;
+     shift:associatedContract ?c .
+  ?c shift:contractEndDate ?end .
+  FILTER(?end < ?NOW)
+}

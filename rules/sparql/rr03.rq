@@ -1,0 +1,22 @@
+# SHIFT-RR-03 : Infer dynamic tariff eligibility
+# Expressible in SWRL: YES
+#
+# PERFORMANCE NOTE: the direct transcription of the documentation's pseudocode
+#   ?a shift:ownsAsset ?m , ?c . ?m a SmartMeterAsset . ?c a ControlAsset .
+#   ?p shift:integratesActor ?a . ?p shift:supportsRealTimePricing true .
+# builds the cross product of every asset pair per actor before filtering on
+# type, then joins an unbound ?p on top. Measured on the naive form: 148 ms at
+# 26 actors, 8,925 ms at 100, 146,656 ms at 250 — roughly cubic in actor count.
+# The naive form is retained at rr03_naive.rq.bak for the comparison reported
+# in the paper. This form is semantically identical and uses existential
+# subqueries instead of joins.
+PREFIX shift: <https://w3id.org/shift/core#>
+CONSTRUCT { ?a shift:eligibleForDynamicTariff true }
+WHERE {
+  ?a a shift:Actor .
+  FILTER EXISTS { ?a shift:ownsAsset ?m . ?m a shift:SmartMeterAsset ;
+                                             shift:isRemoteReadable true }
+  FILTER EXISTS { ?a shift:ownsAsset ?c . ?c a shift:ControlAsset }
+  FILTER EXISTS { ?p shift:integratesActor ?a ;
+                     shift:supportsRealTimePricing true }
+}

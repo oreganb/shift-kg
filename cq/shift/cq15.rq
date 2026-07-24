@@ -1,0 +1,22 @@
+# CQ-15  Which trades crossed community boundaries without consent?
+# Group D (trading and market operations). Basis: SHIFT-RR-27.
+#
+# Parameters (method note 5): the consent flag value that constitutes consent.
+# Boundary crossing is structural (different CMCs), so carries no threshold.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?trade ?buyer ?seller
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?CONSENT_GIVEN { true }              # RR-27 default
+  # ----------------------------------------------------------------------
+  ?trade a shift:FlexibilityTrade ;
+         shift:buyerActor ?buyer ;
+         shift:sellerActor ?seller ;
+         shift:hasCMCConsent ?consent .
+  ?buyer  shift:belongsToCMC ?buyerCMC .
+  ?seller shift:belongsToCMC ?sellerCMC .
+  FILTER(?buyerCMC != ?sellerCMC)
+  FILTER(?consent != ?CONSENT_GIVEN)
+}
+ORDER BY ?trade

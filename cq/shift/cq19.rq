@@ -1,0 +1,14 @@
+# CQ-19  Which tariff plans carry contradictory pricing attributes?
+# Group E (tariffs, pricing, forecasts). Basis: SHIFT-RR-23 (tariff conflict).
+#
+# Parameters (method note 5): none. A plan asserting both dynamic pricing and a
+# flat rate is contradictory by construction; there is no threshold to tune.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?tariff
+WHERE {
+  ?tariff a shift:TariffPlan ;
+          shift:hasDynamicPricing true ;
+          shift:hasFlatRate true .
+}
+ORDER BY ?tariff

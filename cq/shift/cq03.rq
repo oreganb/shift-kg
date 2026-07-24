@@ -1,0 +1,24 @@
+# CQ-03  What market role does a given actor hold, and in which region?
+# Group A (actors and roles).
+#
+# Parameters (method note 5): the actor of interest. No thresholds apply --
+# this is a lookup, not a rule.
+#
+# shift:marketRole is matched as a REQUIRED pattern, not an OPTIONAL one. It was
+# optional while the v0.1.1 ABox asserted the term on no individual, which meant
+# the query returned a row whose role column was permanently unbound -- it
+# "answered" a question about market role without ever producing one. The v1.0
+# enrichment asserts marketRole, so the column now carries a value and the
+# question is genuinely tested.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?actor ?marketRole ?region
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?ACTOR { <https://w3id.org/shift/kg/actor/A000> }
+  # ----------------------------------------------------------------------
+  BIND(?ACTOR AS ?actor)
+  ?actor a shift:Actor ;
+         shift:marketRole ?marketRole ;
+         shift:region ?region .
+}

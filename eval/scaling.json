@@ -1,0 +1,46 @@
+{
+ "rows": [
+  {
+   "scale": "aran",
+   "actors": 26,
+   "triples": 11537,
+   "total": 508.95,
+   "load": 599.2,
+   "closure": 64.8,
+   "f1": 1.0,
+   "inferred": 657
+  },
+  {
+   "scale": "s100",
+   "actors": 100,
+   "triples": 28628,
+   "total": 1590.01,
+   "load": 1396.8,
+   "closure": 182.2,
+   "f1": 1.0,
+   "inferred": 1428
+  },
+  {
+   "scale": "s250",
+   "actors": 250,
+   "triples": 49901,
+   "total": 6214.79,
+   "load": 2587.7,
+   "closure": 504.8,
+   "f1": 1.0,
+   "inferred": 1956
+  },
+  {
+   "scale": "s500",
+   "actors": 500,
+   "triples": 84292,
+   "total": 18873.01,
+   "load": 4550.5,
+   "closure": 865.4,
+   "f1": 1.0,
+   "inferred": 2726
+  }
+ ],
+ "exponent_triples": 1.832,
+ "exponent_actors": 1.219
+}

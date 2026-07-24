@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "SHIFT Knowledge Graph: an executable ABox, rule set and evaluation harness for the SHIFT Ontology"
+message: "If you use this artefact, please cite it."
+type: dataset
+authors:
+  - family-names: "O'Regan"
+    given-names: "Brian"
+    affiliation: "Tyndall National Institute / IERC, University College Cork"
+    email: "brian.oregan@ucc.ie"
+version: 1.0.0
+date-released: 2026-07-24
+license: CC-BY-4.0
+keywords:
+  - ontology engineering
+  - knowledge graph
+  - energy flexibility
+  - transactive energy
+  - OWL 2
+  - SPARQL
+  - semantic reasoning
+abstract: >
+  A populated knowledge graph for the SHIFT Ontology (Semantic Hierarchy for
+  Intelligent Flexibility and Trading), together with a reproducible synthetic
+  instance generator, an executable SPARQL rule set derived from the SHIFT-RR
+  rule specifications, and an evaluation harness reporting per-rule correctness
+  against an independent oracle and rule-evaluation latency across graph scales.
+  All instance data is synthetic. This artefact records no measured deployment.

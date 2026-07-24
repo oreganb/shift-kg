@@ -1,0 +1,33 @@
+# CQ-22  What sequence of device commands implements a curtailment instruction?
+# Group F -- SHIFT is EXPECTED TO FAIL this.
+#
+# Parameters (method note 5): the service whose curtailment is being decomposed.
+#
+# MISSING TERM. SHIFT has no command model. It declares shift:ControlAsset,
+# shift:controlsAsset and the datatype shift:activationSignalType, but:
+#   - there is no Command class, so an individual instruction cannot be
+#     represented at all -- only a signal TYPE string on the control asset;
+#   - there is no Function class binding a command to the device capability
+#     it invokes;
+#   - there is no ordering or sequencing property (no next/step/position), so
+#     even if commands existed, "sequence" could not be expressed.
+# The nearest SAREF equivalents are saref:Command, saref:Function and
+# saref:actsUpon, with ordering left to the profile. Missing terms:
+# saref:Command, saref:Function, plus a step-ordering property.
+#
+# The query below is the closest SHIFT admits and returns nothing.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?service ?controlAsset ?activationSignalType
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?SERVICE { <https://w3id.org/shift/kg/service/S000> }
+  # ----------------------------------------------------------------------
+  BIND(?SERVICE AS ?service)
+  ?SERVICE a shift:FlexibilityService .
+  ?controlAsset a shift:ControlAsset ;
+                shift:controlsAsset ?controlledAsset ;
+                shift:activationSignalType ?activationSignalType .
+  ?controlledAsset shift:usedInFlexService ?SERVICE .
+}
+ORDER BY ?controlAsset

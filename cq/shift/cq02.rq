@@ -1,0 +1,36 @@
+# CQ-02  Which actors are regular sellers (repeated confirmed sales in a period)?
+# Group A (actors and roles). Basis: SHIFT-RR-01 (Prosumer inference).
+#
+# Parameters (method note 5): "regular" is the 3-sale count from RR-01 and the
+# observation period is the 90-day window; neither is question content.
+# The threshold is applied OUTSIDE the aggregating subquery on purpose -- a
+# parameter referenced inside HAVING is out of scope there and silently
+# matches nothing.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?actor ?confirmedSales
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?MIN_CONFIRMED_SALES { 3 }                            # RR-01 default
+  # ----------------------------------------------------------------------
+  {
+    SELECT ?actor (COUNT(DISTINCT ?trade) AS ?confirmedSales)
+    WHERE {
+      # -- parameters ----------------------------------------------------
+      VALUES ?NOW          { "2026-03-09T00:00:00"^^xsd:dateTime }  # graph clock
+      VALUES ?WINDOW_DAYS  { 90 }                              # RR-01 default
+      VALUES ?SALE_STATUS  { "Confirmed"^^xsd:string }         # RR-01 default
+      # ------------------------------------------------------------------
+      BIND(?NOW - STRDT(CONCAT("P", STR(?WINDOW_DAYS), "D"),
+                        xsd:dayTimeDuration) AS ?windowStart)
+      ?trade a shift:FlexibilityTrade ;
+             shift:sellerActor ?actor ;
+             shift:tradeStatus ?SALE_STATUS ;
+             shift:tradeStartTime ?tradeStart .
+      FILTER(?tradeStart >= ?windowStart && ?tradeStart <= ?NOW)
+    }
+    GROUP BY ?actor
+  }
+  FILTER(?confirmedSales >= ?MIN_CONFIRMED_SALES)
+}
+ORDER BY ?actor

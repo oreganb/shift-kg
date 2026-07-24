@@ -1,0 +1,41 @@
+{
+ "CQ-21": [
+  [
+   "https://w3id.org/shift/kg/asset/LOAD-000",
+   "https://w3id.org/shift/kg/asset/METER-000"
+  ]
+ ],
+ "CQ-22": [
+  [
+   "https://w3id.org/shift/kg/command/CURT-1",
+   1
+  ],
+  [
+   "https://w3id.org/shift/kg/command/CURT-2",
+   2
+  ],
+  [
+   "https://w3id.org/shift/kg/command/CURT-3",
+   3
+  ]
+ ],
+ "CQ-23": [
+  [
+   "https://w3id.org/shift/kg/asset/METER-000",
+   "https://w3id.org/shift/kg/property/ActivePower",
+   3.1,
+   "2026-03-05T12:00:00"
+  ]
+ ],
+ "CQ-24": [
+  [
+   "https://w3id.org/shift/kg/activity/FC-000"
+  ],
+  [
+   "https://w3id.org/shift/kg/activity/OP-000"
+  ],
+  [
+   "https://w3id.org/shift/kg/activity/PL-000"
+  ]
+ ]
+}

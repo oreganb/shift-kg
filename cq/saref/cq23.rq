@@ -1,0 +1,18 @@
+# CQ-23 in SAREF Core v4.1.1 -- ANSWERABLE.
+# The observation model SHIFT lacks entirely: saref:PropertyValue reifies a
+# value together with the property it is a value of and the time it was taken,
+# so history survives and a query for time T is well posed.
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?device ?property ?value ?time WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?DEVICE  { <https://w3id.org/shift/kg/asset/METER-000> }
+  VALUES ?AT_TIME { "2026-03-05T12:00:00"^^xsd:dateTime }
+  # ----------------------------------------------------------------------
+  BIND(?DEVICE AS ?device)
+  ?DEVICE saref:hasPropertyValue ?pv .
+  ?pv saref:isValueOfProperty ?property ;
+      saref:hasValue ?value ;
+      saref:hasTimestamp ?time .
+  FILTER(?time = ?AT_TIME)
+}

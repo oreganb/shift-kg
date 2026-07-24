@@ -1,0 +1,13 @@
+# CQ-22 in SAREF Core v4.1.1 -- PARTIAL.
+# This is SAREF's home ground: saref:Function, saref:Command, saref:hasCommand
+# and saref:isCommandOf express the commands that implement a curtailment, and
+# the query returns all three. What it cannot return is the SEQUENCE. SAREF
+# Core declares no ordering, step or successor property, so the second column
+# the gold answer requires (step order) has no term to bind.
+PREFIX saref: <https://saref.etsi.org/core/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?command WHERE {
+  ?device saref:hasFunction ?function .
+  ?function saref:hasCommand ?command .
+}
+ORDER BY ?command

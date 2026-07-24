@@ -1,0 +1,14 @@
+# CQ-21 in SEAS -- ANSWERABLE. The question SHIFT loses.
+# seas:connectedTo is a symmetric object property over seas:System, and SEAS
+# additionally provides ConnectionPoint, Connection, ElectricPowerLine and the
+# phase-level connectsSystemIn* family. A transitive path query is well posed.
+PREFIX seas: <https://w3id.org/seas/>
+SELECT ?fromAsset ?toAsset WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?FROM_ASSET { <https://w3id.org/shift/kg/asset/LOAD-000> }
+  VALUES ?TO_ASSET   { <https://w3id.org/shift/kg/asset/METER-000> }
+  # ----------------------------------------------------------------------
+  BIND(?FROM_ASSET AS ?fromAsset)
+  BIND(?TO_ASSET   AS ?toAsset)
+  ?FROM_ASSET seas:connectedTo+ ?TO_ASSET .
+}

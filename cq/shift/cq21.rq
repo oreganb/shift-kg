@@ -1,0 +1,36 @@
+# CQ-21  What is the electrical topology path between two assets?
+# Group F -- SHIFT is EXPECTED TO FAIL this. Failure here is the correct
+# result; the design rule for the CQ set requires questions SHIFT loses.
+#
+# Parameters (method note 5): the two endpoint assets. No threshold applies.
+#
+# MISSING TERM (the point of this query). SHIFT has no conducting-equipment
+# model. It declares shift:Node (a location/aggregation point) and
+# shift:connectedTo (domain Asset, range Asset), but:
+#   - there is no Terminal / ConnectivityNode class, so an asset has no
+#     electrical endpoints to path through;
+#   - there is no ACLineSegment / Switch / Busbar or any branch class, so
+#     nothing represents the conductor BETWEEN two points;
+#   - shift:connectedTo carries no electrical semantics (no impedance, no
+#     phase, no direction) and is asserted on no individual in the ABox.
+# The nearest CIM equivalents are cim:ConductingEquipment, cim:Terminal,
+# cim:ConnectivityNode and cim:ACLineSegment. This is exactly why the paper
+# assesses CIM at alignment level rather than query level.
+#
+# The query below is the closest SHIFT admits -- transitive closure over
+# shift:connectedTo -- and returns nothing.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?fromAsset ?toAsset
+WHERE {
+  # -- parameters --------------------------------------------------------
+  # Two assets that genuinely exist and are genuinely co-located: both are
+  # owned by actor A000 and both sit at node Inishmore. A physical path between
+  # them certainly exists; SHIFT simply cannot express it.
+  VALUES ?FROM_ASSET { <https://w3id.org/shift/kg/asset/LOAD-000> }
+  VALUES ?TO_ASSET   { <https://w3id.org/shift/kg/asset/METER-000> }
+  # ----------------------------------------------------------------------
+  BIND(?FROM_ASSET AS ?fromAsset)
+  BIND(?TO_ASSET   AS ?toAsset)
+  ?FROM_ASSET shift:connectedTo+ ?TO_ASSET .
+}

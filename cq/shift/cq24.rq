@@ -1,0 +1,33 @@
+# CQ-24  Which activities (forecasting, planning, optimisation) is actor X
+#        currently performing?
+# Group F -- SHIFT is EXPECTED TO FAIL this.
+#
+# Parameters (method note 5): the actor of interest.
+#
+# MISSING TERM. SHIFT has no activity reification. It declares outputs and
+# artefacts (shift:ForecastData, shift:FlexibilitySchedule) and participation
+# links (shift:participatesIn, shift:participatesInFlexibility,
+# shift:participatesInMarket), but:
+#   - there is no Activity class, and none of ForecastingActivity /
+#     PlanningActivity / OptimizationActivity exists;
+#   - there is no performs / executes property from an Actor to an activity,
+#     so "who is doing what, now" cannot be stated;
+#   - the forecast artefact carries no agent, so even the producer of a
+#     ForecastData individual is unrecoverable.
+# The nearest SEAS equivalents are seas:Activity with its subclasses
+# seas:ForecastingActivity, seas:PlanningActivity, seas:OptimizationActivity,
+# and the seas:ActorOntology role/activity linkage. This is the CQ the paper
+# expects SEAS to win.
+#
+# The query below is the closest SHIFT admits and returns nothing.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?actor ?activity
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?ACTOR { <https://w3id.org/shift/kg/actor/A000> }
+  # ----------------------------------------------------------------------
+  BIND(?ACTOR AS ?actor)
+  ?ACTOR shift:participatesIn ?activity .
+}
+ORDER BY ?activity

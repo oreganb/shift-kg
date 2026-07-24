@@ -1,0 +1,35 @@
+# CQ-08 in SAREF Core + 4ENER + 4BLDG -- ANSWERABLE.
+# This is the clearest thing the extensions buy. SAREF Core could count
+# executions but had no outcome term, so a failure ratio was uncomputable.
+# s4ener:hasInstructionStatus with the InstructionStatus individuals
+# (Succeeded, Aborted, Rejected, Revoked, ...) supplies the numerator, and the
+# question becomes fully expressible.
+PREFIX saref:  <https://saref.etsi.org/core/>
+PREFIX s4ener: <https://saref.etsi.org/saref4ener/>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+SELECT ?asset ?activations ?failures ?failureRatio
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?MIN_ACTIVATIONS   { 5 }             # RR-28 default
+  VALUES ?MAX_FAILURE_RATIO { 0.2 }           # RR-28 default
+  # ----------------------------------------------------------------------
+  {
+    SELECT ?asset (COUNT(DISTINCT ?event) AS ?activations)
+                  (SUM(IF(?status = s4ener:Aborted, 1, 0)) AS ?failures)
+    WHERE {
+      VALUES ?NOW         { "2026-03-09T00:00:00"^^xsd:dateTime }
+      VALUES ?WINDOW_DAYS { 30 }              # RR-28 default
+      BIND(?NOW - STRDT(CONCAT("P", STR(?WINDOW_DAYS), "D"),
+                        xsd:dayTimeDuration) AS ?windowStart)
+      ?event a s4ener:FlexibilityInstruction ;
+             saref:madeBy ?asset ;
+             s4ener:hasInstructionStatus ?status ;
+             saref:hasTimestamp ?eventTime .
+      FILTER(?eventTime > ?windowStart)
+    }
+    GROUP BY ?asset
+  }
+  BIND(?failures / ?activations AS ?failureRatio)
+  FILTER(?activations >= ?MIN_ACTIVATIONS && ?failureRatio > ?MAX_FAILURE_RATIO)
+}
+ORDER BY ?asset

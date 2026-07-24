@@ -1,0 +1,31 @@
+# CQ-20  Which nodes have forecasted load exceeding current DER capacity in the
+#        next window?
+# Group E (tariffs, pricing, forecasts). Basis: SHIFT-RR-05 / RR-02.
+#
+# Parameters (method note 5): the headroom ratio applied to DER capacity before
+# the comparison, and the forecast type. A ratio of 1.0 means "forecast load
+# strictly above installed DER capacity".
+#
+# Uses shift:forecastForNode (domain ForecastData, range Node), declared in
+# SHIFT v1.0 to close the gap this CQ exposed. Before it, no property related
+# ForecastData to Node in either direction -- informedByForecast has domain
+# ControlAsset|TradeWindow, linkedToForecast Asset|FlexibilitySchedule,
+# referencedInForecast TariffPlan, usedInForecast SensorAsset|SmartMeterAsset --
+# and the only route was the two-hop ForecastData -> FlexibilityService -> Node.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?node ?predictedLoad_kW ?totalDERCapacity_kW
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?HEADROOM_RATIO { 1.0 }               # RR-02 default
+  VALUES ?FORECAST_TYPE  { "Load"^^xsd:string }
+  # ----------------------------------------------------------------------
+  ?forecast a shift:ForecastData ;
+            shift:forecastType ?FORECAST_TYPE ;
+            shift:predictedLoad_kW ?predictedLoad_kW ;
+            shift:forecastForNode ?node .
+  ?node a shift:Node ;
+        shift:totalDERCapacity_kW ?totalDERCapacity_kW .
+  FILTER(?predictedLoad_kW > (?totalDERCapacity_kW * ?HEADROOM_RATIO))
+}
+ORDER BY ?node

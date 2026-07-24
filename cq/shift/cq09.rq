@@ -1,0 +1,24 @@
+# CQ-09  Which buildings host a heat pump but no battery?
+# Group B (assets and flexibility). Basis: SHIFT-RR-21 shape (recommend storage).
+#
+# Parameters (method note 5): none. The question is structural -- presence of
+# one asset class and absence of another. No rule threshold applies.
+#
+# NOTE this returns nothing on the aran graph. shift:BuildingAsset and
+# shift:connectedToBuilding both exist in the TBox, but the v0.1.1 generator
+# instantiates no buildings and asserts no connectedToBuilding triples, so the
+# gold answer is empty too. Recorded as vacuous, not as a pass. The gap is in
+# the ABox, not the vocabulary.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?building
+WHERE {
+  ?building a shift:BuildingAsset .
+  ?heatPump a shift:HeatPumpAsset ;
+            shift:connectedToBuilding ?building .
+  FILTER NOT EXISTS {
+    ?battery a shift:BatteryAsset ;
+             shift:connectedToBuilding ?building .
+  }
+}
+ORDER BY ?building

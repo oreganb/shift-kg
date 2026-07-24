@@ -1,0 +1,24 @@
+# CQ-17  What total energy volume cleared per trade window across a day?
+# Group D (trading and market operations).
+#
+# Parameters (method note 5): the day bounds and which trade status counts as
+# cleared. The 30-minute window granularity is a property of the graph, not a
+# parameter.
+PREFIX shift: <https://w3id.org/shift/core#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+SELECT ?window ?windowStart (SUM(?volume) AS ?clearedVolume_kWh)
+WHERE {
+  # -- parameters --------------------------------------------------------
+  VALUES ?DAY_START      { "2026-03-02T00:00:00"^^xsd:dateTime } # graph epoch
+  VALUES ?DAY_END        { "2026-03-03T00:00:00"^^xsd:dateTime } # +1 day
+  VALUES ?CLEARED_STATUS { "Confirmed"^^xsd:string }             # market default
+  # ----------------------------------------------------------------------
+  ?trade a shift:FlexibilityTrade ;
+         shift:assignedToWindow ?window ;
+         shift:tradeStatus ?CLEARED_STATUS ;
+         shift:energyVolume_kWh ?volume .
+  ?window shift:startTime ?windowStart .
+  FILTER(?windowStart >= ?DAY_START && ?windowStart < ?DAY_END)
+}
+GROUP BY ?window ?windowStart
+ORDER BY ?windowStart
